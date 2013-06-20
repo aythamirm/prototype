@@ -1,0 +1,9 @@
+  <b>Tasks:</b>
+  <%- @project.tasks.each do |task| %>
+    <div class="task">
+      <%= task.title %>
+      <%= task.due_date %>
+      <%= task.note %>
+      <%= task.priority %>
+    </div>  
+  <%- end %> 
