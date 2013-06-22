@@ -55,6 +55,9 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    gon (4.1.1)
+      actionpack (>= 2.3.0)
+      json
     haml (4.0.3)
       tilt
     hike (1.2.3)
@@ -143,6 +146,7 @@ DEPENDENCIES
   debugger
   devise
   execjs
+  gon
   haml
   jquery-rails
   nested_set

@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
+    @interruption = Interruption.new 
     @nodes = current_user.nodes.all
     @project = Project.new
     respond_to do |format|
@@ -82,5 +83,5 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:task_name, :due_date, :note, :priority, :parent_id)
-  end
+  end   
 end

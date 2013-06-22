@@ -13,7 +13,7 @@
 - @nodes.each do |node| 
   %tr
     - if node.type == 'Task' 
-      .task{ data: { task_id: node.id } }
+      .task{ data: { 'task-id' => node.id } }
         %td= node.task_name
         %td= node.due_date 
         %td= node.priority 
@@ -26,6 +26,11 @@
       %td= node.project_title 
       %td= link_to 'Edit', edit_project_path(node) if node.type == 'project'
     %br
+.hidden-form(style="display:none")    
+  = simple_form_for @interruption, url: '#' do |f|
+    = f.input_field :name, class: 'name-input' 
+    = f.input_field :description, class: 'description-input' 
+    = link_to 'Create interruption', '#', class: 'link_create_interruption' 
 
 = link_to 'New Task', new_task_path 
 .sidebar(style="display:inline")

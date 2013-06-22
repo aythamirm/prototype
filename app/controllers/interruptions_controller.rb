@@ -1,5 +1,7 @@
 class InterruptionsController < ApplicationController
   def create
-      debugger; 1 + 1
+    params[:interruption].merge!(task_id: params[:task_id], start_time: Time.now)
+    interruption = Interruption.create params[:interruption] 
+    render json: interruption
   end
 end	

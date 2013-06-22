@@ -28,6 +28,7 @@ end
 
 gem 'bootstrap-sass'
 gem 'devise' 
+gem 'gon'
 gem 'haml' 
 gem 'nested_set'
 gem 'rails', '3.2.13'
