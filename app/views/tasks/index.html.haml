@@ -1,0 +1,30 @@
+%h1 Listing tasks
+
+%table
+  %tr
+    %th Tasks
+    %th Due date
+    %th Priority
+    %th Note
+    %th 
+    %th 
+    %th
+
+- @nodes.each do |node| 
+  %tr
+    - if node.type == 'Task' 
+      %td= node.task_name
+      %td= node.due_date 
+      %td= node.priority 
+      %td= node.note 
+      %td= link_to 'Show', node 
+      %td= link_to 'Edit', edit_task_path(node) 
+      %td= link_to 'Destroy', node, method: :delete, data: { confirm: 'Are you sure?' } 
+    - else 
+      %td= node.project_title 
+      %td= link_to 'Edit', edit_project_path(node) if node.type == 'project'
+    %br
+
+= link_to 'New Task', new_task_path 
+.sidebar(style="display:inline")
+  = render 'projects/form' 

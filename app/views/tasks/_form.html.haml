@@ -1,0 +1,21 @@
+= simple_form_for(@task) do |f| 
+  - if @task.errors.any? 
+    #error_explanation
+      %h2
+        = pluralize(@task.errors.count, "error") 
+        prohibited this task from being saved:
+
+      %ul
+      - @task.errors.full_messages.each do |msg| 
+        %li= msg 
+  .field= f.input :task_name 
+
+  .field= f.input :due_date 
+  .field= f.input :priority 
+  
+  .field= f.input :note 
+  
+  %div= f.select :parent_id, nested_set_options(Project, @parent) {|i, level| "|#{'-' * level} #{i.project_title}" } 
+
+  .actions= f.submit 
+

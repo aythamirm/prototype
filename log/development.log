@@ -8369,3 +8369,618 @@ Served asset /tasks.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
 Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-06-22 14:38:08 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1
+  Rendered projects/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 44ms (Views: 37.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:38:09 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:38:09 +0200
+Served asset /projects.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:38:09 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:38:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:38:09 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:38:09 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:38:09 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:38:09 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:38:09 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-22 14:38:24 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.6ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (Inconsistent indentation: 1 space used for indentation, but the rest of the document was indented using 2 spaces.):
+    27: 
+    28: = link_to 'New Task', new_task_path 
+    29: 
+    30:  .sidebar(style="display:inline")
+    31:   = render 'projects/form' 
+  app/views/tasks/index.html.haml:30
+  app/controllers/tasks_controller.rb:7:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-22 14:40:23 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."parent_id" IS NULL ORDER BY "lft"[0m
+  [1m[35mNode Load (0.3ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1 AND "nodes"."rgt" <= 2) ORDER BY "nodes"."lft"
+  [1m[36mNode Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 3 AND "nodes"."rgt" <= 16) ORDER BY "nodes"."lft"[0m
+  [1m[35mNode Load (0.3ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 17 AND "nodes"."rgt" <= 24) ORDER BY "nodes"."lft"
+  Rendered projects/_form.html.haml (17.6ms)
+  Rendered tasks/index.html.haml within layouts/application (32.0ms)
+Completed 200 OK in 73ms (Views: 57.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:23 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:23 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:23 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:23 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:23 +0200
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:23 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:23 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:23 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:23 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/tasks/16" for 127.0.0.1 at 2013-06-22 14:40:27 +0200
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = ? LIMIT 1  [["id", "16"]]
+  Rendered tasks/show.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 37ms (Views: 31.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:28 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:28 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:28 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:28 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:28 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:28 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:28 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:28 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:28 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-22 14:40:30 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."parent_id" IS NULL ORDER BY "lft"[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1 AND "nodes"."rgt" <= 2) ORDER BY "nodes"."lft"
+  [1m[36mNode Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 3 AND "nodes"."rgt" <= 16) ORDER BY "nodes"."lft"[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 17 AND "nodes"."rgt" <= 24) ORDER BY "nodes"."lft"
+  Rendered projects/_form.html.haml (19.1ms)
+  Rendered tasks/index.html.haml within layouts/application (25.7ms)
+Completed 200 OK in 158ms (Views: 146.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:30 +0200
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:30 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:30 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:30 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:40:30 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:30 +0200
+Served asset /tasks.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:30 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:40:30 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tasks/16/edit" for 127.0.0.1 at 2013-06-22 14:40:33 +0200
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = ? LIMIT 1  [["id", "16"]]
+  Rendered tasks/_form.html.haml (1.3ms)
+  Rendered tasks/edit.html.haml within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (Inconsistent indentation: 5 spaces used for indentation, but the rest of the document was indented using 3 spaces.):
+    1: = simple_form_for(@task) do |f| 
+    2:    - if @task.errors.any? 
+    3:      #error_explanation
+    4:       %h2
+    5:         = pluralize(@task.errors.count, "error") 
+    6:         prohibited this task from being saved:
+  app/views/tasks/_form.html.haml:3
+  app/views/tasks/edit.html.haml:3:in `_app_views_tasks_edit_html_haml___890569509__622346718'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.1ms)
+
+
+Started GET "/tasks/16/edit" for 127.0.0.1 at 2013-06-22 14:42:07 +0200
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."parent_id" IS NULL ORDER BY "lft"[0m
+  [1m[35mNode Load (0.3ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1 AND "nodes"."rgt" <= 2) ORDER BY "nodes"."lft"
+  [1m[36mNode Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 3 AND "nodes"."rgt" <= 16) ORDER BY "nodes"."lft"[0m
+  [1m[35mNode Load (0.3ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 17 AND "nodes"."rgt" <= 24) ORDER BY "nodes"."lft"
+  Rendered tasks/_form.html.haml (29.6ms)
+  Rendered tasks/edit.html.haml within layouts/application (33.0ms)
+Completed 200 OK in 63ms (Views: 56.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:07 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:07 +0200
+Served asset /projects.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:07 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:07 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:07 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:07 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:07 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:07 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:07 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tasks/16" for 127.0.0.1 at 2013-06-22 14:42:12 +0200
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = ? LIMIT 1  [["id", "16"]]
+  Rendered tasks/show.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 58ms (Views: 50.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:14 +0200
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:15 +0200
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:15 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:15 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:15 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:15 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:15 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:15 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-22 14:42:16 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."parent_id" IS NULL ORDER BY "lft"[0m
+  [1m[35mNode Load (0.3ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1 AND "nodes"."rgt" <= 2) ORDER BY "nodes"."lft"
+  [1m[36mNode Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 3 AND "nodes"."rgt" <= 16) ORDER BY "nodes"."lft"[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 17 AND "nodes"."rgt" <= 24) ORDER BY "nodes"."lft"
+  Rendered projects/_form.html.haml (14.7ms)
+  Rendered tasks/index.html.haml within layouts/application (19.9ms)
+Completed 200 OK in 57ms (Views: 49.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:17 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:17 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:17 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:17 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:17 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:17 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:17 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:17 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:17 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/tasks/18" for 127.0.0.1 at 2013-06-22 14:42:25 +0200
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = ? LIMIT 1  [["id", "18"]]
+  Rendered tasks/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:26 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:26 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:26 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:42:26 +0200
+Served asset /tasks.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:26 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:26 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:26 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:26 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:42:26 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks/18" for 127.0.0.1 at 2013-06-22 14:43:24 +0200
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = ? LIMIT 1  [["id", "18"]]
+  Rendered tasks/show.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:24 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:24 +0200
+Served asset /scaffolds.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:25 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:25 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:25 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:25 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:25 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:25 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-22 14:43:30 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  [1m[36mProject Load (9.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."parent_id" IS NULL ORDER BY "lft"[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1 AND "nodes"."rgt" <= 2) ORDER BY "nodes"."lft"
+  [1m[36mNode Load (0.6ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 3 AND "nodes"."rgt" <= 16) ORDER BY "nodes"."lft"[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 17 AND "nodes"."rgt" <= 24) ORDER BY "nodes"."lft"
+  Rendered projects/_form.html.haml (101.5ms)
+  Rendered tasks/index.html.haml within layouts/application (106.7ms)
+Completed 200 OK in 140ms (Views: 124.1ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:31 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:31 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:31 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:31 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:31 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:31 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:31 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:31 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:31 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2013-06-22 14:43:37 +0200
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1 LIMIT 1
+  [1m[36mProject Load (7.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."parent_id" IS NULL ORDER BY "lft"[0m
+  [1m[35mNode Load (0.7ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1 AND "nodes"."rgt" <= 2) ORDER BY "nodes"."lft"
+  [1m[36mNode Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 3 AND "nodes"."rgt" <= 16) ORDER BY "nodes"."lft"[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 17 AND "nodes"."rgt" <= 24) ORDER BY "nodes"."lft"
+  Rendered tasks/_form.html.haml (54.4ms)
+  Rendered tasks/new.html.haml within layouts/application (58.8ms)
+Completed 200 OK in 93ms (Views: 78.7ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:37 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:37 +0200
+Served asset /projects.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:38 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:38 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:38 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:38 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:38 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:38 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-22 14:43:40 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."parent_id" IS NULL ORDER BY "lft"[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1 AND "nodes"."rgt" <= 2) ORDER BY "nodes"."lft"
+  [1m[36mNode Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 3 AND "nodes"."rgt" <= 16) ORDER BY "nodes"."lft"[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 17 AND "nodes"."rgt" <= 24) ORDER BY "nodes"."lft"
+  Rendered projects/_form.html.haml (16.3ms)
+  Rendered tasks/index.html.haml within layouts/application (21.8ms)
+Completed 200 OK in 56ms (Views: 47.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:40 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:40 +0200
+Served asset /projects.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:40 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:43:40 +0200
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:40 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:40 +0200
+Served asset /projects.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:41 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:43:41 +0200
+Served asset /application.js - 304 Not Modified (4ms)

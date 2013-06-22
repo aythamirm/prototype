@@ -9,8 +9,6 @@
       -@project.errors.full_messages.each do |msg| 
         %li = msg  
   
-  .field
-    = f.input :project_title 
-    = f.select :parent_id, nested_set_options(Project, @parent) {|i, level| "|#{'-' * level} #{i.project_title}" } 
-  .actions
-    = f.submit 
+  .field= f.input :project_title 
+  .field= f.select :parent_id, nested_set_options(Project, @parent) {|i, level| "|#{'-' * level} #{i.project_title}" } 
+  .actions= f.submit 
