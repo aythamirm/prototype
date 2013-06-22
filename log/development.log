@@ -7857,3 +7857,515 @@ Served asset /tasks.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 13:03:11 +0200
 Served asset /application.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-06-22 14:04:38 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1
+ERROR: compiling _app_views_projects_index_html_haml__929622102_89733750 RAISED /home/aythami/work/prototype/app/views/projects/index.html.haml:13: syntax error, unexpected ')'
+));}</td>\n  <td>#{_hamlout.ad...
+ ^
+/home/aythami/work/prototype/app/views/projects/index.html.haml:14: unknown regexp options - td
+/home/aythami/work/prototype/app/views/projects/index.html.haml:14: syntax error, unexpected $undefined
+));}</td>\n  <td>#{_hamlout.adjust_tabs...
+          ^
+/home/aythami/work/prototype/app/views/projects/index.html.haml:15: syntax error, unexpected ')'
+));}</td>\n  <td>#{_hamlout.ad...
+ ^
+/home/aythami/work/prototype/app/views/projects/index.html.haml:16: unknown regexp options - td
+/home/aythami/work/prototype/app/views/projects/index.html.haml:16: syntax error, unexpected $undefined
+));}</td>\n</tr>\n", -1, false);end;_hamlout.push_text("<br>\n#{
+          ^
+/home/aythami/work/prototype/app/views/projects/index.html.haml:16: unterminated regexp meets end of file
+/home/aythami/work/prototype/app/views/projects/index.html.haml:16: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_projects_index_html_haml__929622102_89733750(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "projects/index";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;_hamlout.push_text("<h1>Listing projects</h1>\n<table>\n  <tr>\n    <th>Title</th>\n    <th></th>\n    <th></th>\n    <th></th>\n  </tr>\n</table>\n", 0, false);
+
+
+
+
+
+
+
+
+ @projects.each do |project|
+_hamlout.push_text("<tr>\n  <td>#{_hamlout.adjust_tabs(2); 
+_hamlout.format_script_false_true_false_true_false_true_false((project.project_title %
+));}</td>\n  <td>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((link_to 'Show', project
+));}</td>\n  <td>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((link_to 'Edit', edit_project_path(project)
+));}</td>\n  <td>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }
+));}</td>\n</tr>\n", -1, false);end;_hamlout.push_text("<br>\n#{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'New Project', new_project_path
+));}\n", 0, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `module_eval'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `compile'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/aythami/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/home/aythami/work/prototype/app/controllers/projects_controller.rb:8:in `index'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:425:in `_run__735584163__process_action__1056345640__callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__152603356__call__603382909__callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/aythami/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/aythami/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/aythami/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered projects/index.html.haml within layouts/application (92.4ms)
+Completed 500 Internal Server Error in 388ms
+
+ActionView::Template::Error (/home/aythami/work/prototype/app/views/projects/index.html.haml:13: syntax error, unexpected ')'
+));}</td>\n  <td>#{_hamlout.ad...
+ ^
+/home/aythami/work/prototype/app/views/projects/index.html.haml:14: unknown regexp options - td
+/home/aythami/work/prototype/app/views/projects/index.html.haml:14: syntax error, unexpected $undefined
+));}</td>\n  <td>#{_hamlout.adjust_tabs...
+          ^
+/home/aythami/work/prototype/app/views/projects/index.html.haml:15: syntax error, unexpected ')'
+));}</td>\n  <td>#{_hamlout.ad...
+ ^
+/home/aythami/work/prototype/app/views/projects/index.html.haml:16: unknown regexp options - td
+/home/aythami/work/prototype/app/views/projects/index.html.haml:16: syntax error, unexpected $undefined
+));}</td>\n</tr>\n", -1, false);end;_hamlout.push_text("<br>\n#{
+          ^
+/home/aythami/work/prototype/app/views/projects/index.html.haml:16: unterminated regexp meets end of file
+/home/aythami/work/prototype/app/views/projects/index.html.haml:16: syntax error, unexpected $end, expecting ')'):
+    10: - @projects.each do |project| 
+    11:   %tr
+    12:     %td= project.project_title %
+    13:     %td= link_to 'Show', project 
+    14:     %td= link_to 'Edit', edit_project_path(project) 
+    15:     %td= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } 
+    16: %br 
+  app/controllers/projects_controller.rb:8:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-06-22 14:05:23 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1
+  Rendered projects/index.html.haml within layouts/application (68.9ms)
+Completed 200 OK in 118ms (Views: 111.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:23 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:24 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:24 +0200
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:24 +0200
+Served asset /projects.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:24 +0200
+Served asset /tasks.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:24 +0200
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:24 +0200
+Served asset /projects.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:24 +0200
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:24 +0200
+Served asset /tasks.js - 304 Not Modified (3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-06-22 14:05:44 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1
+  Rendered projects/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 55ms (Views: 40.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:44 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:44 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:44 +0200
+Served asset /projects.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:44 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:44 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:44 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:44 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:44 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:44 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/projects/6" for 127.0.0.1 at 2013-06-22 14:05:47 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."parent_id" IS NULL ORDER BY "lft"[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1 AND "nodes"."rgt" <= 2) ORDER BY "nodes"."lft"
+  [1m[36mNode Load (0.8ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 3 AND "nodes"."rgt" <= 16) ORDER BY "nodes"."lft"[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 17 AND "nodes"."rgt" <= 24) ORDER BY "nodes"."lft"
+  Rendered projects/show.html.haml within layouts/application (25.5ms)
+Completed 200 OK in 97ms (Views: 55.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:47 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:47 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:47 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:47 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:47 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:47 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:47 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:47 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-06-22 14:05:49 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.6ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1
+  Rendered projects/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 58ms (Views: 51.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:49 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:49 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:49 +0200
+Served asset /tasks.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:49 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:49 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:49 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:49 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:49 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2013-06-22 14:05:54 +0200
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."parent_id" IS NULL ORDER BY "lft"[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1 AND "nodes"."rgt" <= 2) ORDER BY "nodes"."lft"
+  [1m[36mNode Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 3 AND "nodes"."rgt" <= 16) ORDER BY "nodes"."lft"[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 17 AND "nodes"."rgt" <= 24) ORDER BY "nodes"."lft"
+  Rendered projects/_form.html.haml (558.4ms)
+  Rendered projects/edit.html.haml within layouts/application (571.7ms)
+Completed 200 OK in 602ms (Views: 596.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:55 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:55 +0200
+Served asset /projects.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:55 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:55 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:05:55 +0200
+Served asset /tasks.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:55 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:56 +0200
+Served asset /tasks.js - 304 Not Modified (78ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:05:56 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/projects/13" for 127.0.0.1 at 2013-06-22 14:06:03 +0200
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1  [["id", "13"]]
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."parent_id" IS NULL ORDER BY "lft"[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1 AND "nodes"."rgt" <= 2) ORDER BY "nodes"."lft"
+  [1m[36mNode Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 3 AND "nodes"."rgt" <= 16) ORDER BY "nodes"."lft"[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 17 AND "nodes"."rgt" <= 24) ORDER BY "nodes"."lft"
+  Rendered projects/show.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 56ms (Views: 44.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:06:04 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:06:04 +0200
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:06:04 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:06:04 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:04 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:04 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:04 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:04 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:04 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.6ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1
+  Rendered projects/index.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 41ms (Views: 34.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
+Served asset /projects.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-22 14:06:10 +0200
+Served asset /application.js - 304 Not Modified (3ms)
