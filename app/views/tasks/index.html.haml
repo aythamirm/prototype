@@ -18,6 +18,7 @@
         %td= node.due_date 
         %td= node.priority 
         %td= node.note 
+        %td= link_to 'Pause', '#', class: 'pause'
         %td= link_to 'Show', node 
         %td= link_to 'Edit', edit_task_path(node) 
         %td= link_to 'Destroy', node, method: :delete, data: { confirm: 'Are you sure?' } 

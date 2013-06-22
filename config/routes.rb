@@ -4,8 +4,9 @@
   # The priority is based upon order of creation:
   # first created -> highest priority.
   resources :projects
-  resources :tasks do
+  resources :tasks do 
     resources :interruptions
+    post '/interruptions' => "interruptions#create", :as => :create_interruption
   end   
 
   # Sample of regular route:
@@ -54,7 +55,7 @@
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'projects#index'
+  root :to => 'tasks#index'
 
   # See how all your routes lay out with "rake routes"
 
