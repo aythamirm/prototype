@@ -3,8 +3,10 @@
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
-    resources :projects
-    resources :tasks
+  resources :projects
+  resources :tasks do
+    resources :interruptions
+  end   
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

@@ -26,6 +26,7 @@ group :development do
   gem 'debugger'
 end
 
+gem 'bootstrap-sass'
 gem 'devise' 
 gem 'haml' 
 gem 'nested_set'

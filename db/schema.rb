@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130619170657) do
+ActiveRecord::Schema.define(:version => 20130622135828) do
+
+  create_table "interruptions", :force => true do |t|
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "task_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "interruptions", ["task_id"], :name => "index_interruptions_on_task_id"
 
 # Could not dump table "nodes" because of following StandardError
 #   Unknown type 'reference' for column 'user_id'

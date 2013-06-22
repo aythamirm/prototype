@@ -13,13 +13,14 @@
 - @nodes.each do |node| 
   %tr
     - if node.type == 'Task' 
-      %td= node.task_name
-      %td= node.due_date 
-      %td= node.priority 
-      %td= node.note 
-      %td= link_to 'Show', node 
-      %td= link_to 'Edit', edit_task_path(node) 
-      %td= link_to 'Destroy', node, method: :delete, data: { confirm: 'Are you sure?' } 
+      .task{ data: { task_id: node.id } }
+        %td= node.task_name
+        %td= node.due_date 
+        %td= node.priority 
+        %td= node.note 
+        %td= link_to 'Show', node 
+        %td= link_to 'Edit', edit_task_path(node) 
+        %td= link_to 'Destroy', node, method: :delete, data: { confirm: 'Are you sure?' } 
     - else 
       %td= node.project_title 
       %td= link_to 'Edit', edit_project_path(node) if node.type == 'project'
