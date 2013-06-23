@@ -7,6 +7,7 @@
   resources :tasks do 
     resources :interruptions
     post '/interruptions' => "interruptions#create", :as => :create_interruption
+    get  '/interruptions_stop'=> "interruptions#stop_interruption", :as => :stop_interruption
   end   
 
   # Sample of regular route:

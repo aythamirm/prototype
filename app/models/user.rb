@@ -11,4 +11,10 @@ class User < ActiveRecord::Base
   has_many :nodes
   has_many :projects
   has_many :tasks
+  
+  after_create :create_root
+  def create_root
+    self.projects.create(project_title: '/')
+  end 
 end
+
