@@ -13880,3 +13880,4 @@ Started POST "/tasks/18/interruptions" for 127.0.0.1 at 2013-06-22 22:29:47 +020
 Processing by InterruptionsController#create as JSON
   Parameters: {"interruption"=>{"name"=>"interruption 3", "description"=>"david me sigue vigilando"}, "task_id"=>"18"}
   [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 3737626ms (Views: 0.5ms | ActiveRecord: 0.5ms)
