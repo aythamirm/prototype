@@ -25,7 +25,8 @@ end
 group :development do
   gem 'debugger'
 end
-gem 'awesome_nested_set'
+
+gem 'awesome_nested_set', github:'xxswingxx/awesome_nested_set'
 gem 'bootstrap-sass'
 gem 'devise' 
 gem 'gon'
@@ -33,7 +34,9 @@ gem 'haml'
 gem 'rails', '3.2.13'
 gem 'simple_form'
 gem 'sqlite3'
+gem 'state_machine'
 gem 'strong_parameters'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

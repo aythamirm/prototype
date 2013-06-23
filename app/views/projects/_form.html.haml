@@ -10,5 +10,5 @@
         %li = msg  
   
   .field= f.input :project_title 
-  .field= f.select :parent_id, nested_set_options(current_user.projects, @project) {|i| "#{'-' * i.level} #{i.project_title}" } 
+  .field= f.select :parent_id, nested_set_options(current_user.projects, nil, method: :type, value: 'Task') {|i| "#{'-' * i.level} #{i.project_title}"  if i.type == 'Project' } 
   .actions= f.submit 

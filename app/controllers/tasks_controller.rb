@@ -79,6 +79,11 @@ class TasksController < ApplicationController
     end
   end
 
+  def start
+     current_user.tasks.find(params[:task_id]).activate!
+     render json: true
+  end  
+
   private
 
   def task_params

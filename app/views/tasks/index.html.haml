@@ -18,7 +18,14 @@
         %td= node.due_date 
         %td= node.priority 
         %td= node.note 
-        %td= link_to 'Pause', '#', class: 'pause'
+        - case node.state
+        - when 'active'
+          - caption = 'pause'
+        - when 'paused'
+          - caption = 'resume'
+        - when 'to_do'
+          - caption = 'start'      
+        %td= link_to caption.capitalize, '#', class: caption
         %td= link_to 'Show', node 
         %td= link_to 'Edit', edit_task_path(node) 
         %td= link_to 'Destroy', node, method: :delete, data: { confirm: 'Are you sure?' } 

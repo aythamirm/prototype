@@ -4,7 +4,9 @@
   # The priority is based upon order of creation:
   # first created -> highest priority.
   resources :projects
-  resources :tasks do 
+  resources :tasks do
+    get '/start_task' => "tasks#start", :as => :start_task
+
     resources :interruptions
     post '/interruptions' => "interruptions#create", :as => :create_interruption
     get  '/interruptions_stop'=> "interruptions#stop_interruption", :as => :stop_interruption

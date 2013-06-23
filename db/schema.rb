@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130622135828) do
+ActiveRecord::Schema.define(:version => 20130623150736) do
 
   create_table "interruptions", :force => true do |t|
     t.datetime "start_time"

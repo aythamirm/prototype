@@ -21,10 +21,12 @@ $('.link_create_interruption').bind 'click', () ->
     success: ()-> 
      $('.hidden-form').slideUp()
      $('.mark').removeClass('pause').addClass('resume')
-     $('.mark').html('resume')
+     $('.mark').html('Resume')
     error:  ()-> 
       alert(":-(")
+
 $('.content').on 'click', '.resume', ()-> 
+  thisClicked = $(this)
   taskID = $(this).parent().data('task-id')
   resumeUrl = "/tasks/#{taskID}/interruptions_stop"
   $.ajax
@@ -32,6 +34,21 @@ $('.content').on 'click', '.resume', ()->
     type: 'GET'
     dataType: 'json'
     success:()->
-      alert(":-)")
+      thisClicked.removeClass('resume').addClass('pause')
+      thisClicked.html('Pause')
+    error:()->  
+      alert(":-(")
+
+$('.content').on 'click', '.start', ()->
+  thisClicked2 = $(this)
+  taskID = $(this).parent().data('task-id')
+  startUrl = "/tasks/#{taskID}/start_task"
+  $.ajax
+    url: startUrl
+    type: 'GET'
+    dataype:'json'
+    success:()->
+      thisClicked2.removeClass('start').addClass('pause')
+      thisClicked2.html('Pause')
     error:()->  
       alert(":-(")
