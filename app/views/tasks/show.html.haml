@@ -16,6 +16,12 @@
   %b Note:
   = @task.note 
 
+%p
+  %b calculation:
+  - suma = 0
+  - @task.interruptions.each do |valor|
+    - suma = suma + valor  
+  = suma
 
 = link_to 'Edit', edit_task_path(@task)  |
 = link_to 'Back', tasks_path 

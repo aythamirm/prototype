@@ -33,6 +33,7 @@ $('.content').on 'click', '.resume', ()->
     url: resumeUrl
     type: 'GET'
     dataType: 'json'
+    data: {end_time: new Date}
     success:()->
       thisClicked.removeClass('resume').addClass('pause')
       thisClicked.html('Pause')
