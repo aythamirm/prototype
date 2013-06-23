@@ -25,12 +25,11 @@ end
 group :development do
   gem 'debugger'
 end
-
+gem 'awesome_nested_set'
 gem 'bootstrap-sass'
 gem 'devise' 
 gem 'gon'
 gem 'haml' 
-gem 'nested_set'
 gem 'rails', '3.2.13'
 gem 'simple_form'
 gem 'sqlite3'

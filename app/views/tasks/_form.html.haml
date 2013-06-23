@@ -15,7 +15,7 @@
   
   .field= f.input :note 
   
-  %div= f.select :parent_id, nested_set_options(Project, @parent) {|i, level| "|#{'-' * level} #{i.project_title}" } 
+  %div= f.select :parent_id, nested_set_options(current_user.projects, nil){|i| "#{'-' * i.level} #{i.project_title}" } 
 
   .actions= f.submit 
 

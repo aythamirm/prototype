@@ -3,12 +3,13 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $('a.pause').bind 'click', () ->
-  $('.hidden-form').show()
-  
-  $(this).addClass('marca')
+  $(document).find('.mark').removeClass('mark')
+  $(this).addClass('mark')
 
+  $('.hidden-form').slideDown()
+  
 $('.link_create_interruption').bind 'click', () ->
-  taskId = $('.marca').parent().data('task-id')
+  taskId = $('.mark').parent().data('task-id')
   name = $('.name-input').val()
   description = $('.description-input').val()
   interruptionUrl = "/tasks/#{taskId}/interruptions"
@@ -18,6 +19,6 @@ $('.link_create_interruption').bind 'click', () ->
     dataType: 'json'
     data: { interruption: { name: name, description: description } }
     success: ()-> 
-      alert(":-)")
+     $('.hidden-form').slideUp()
     error:  ()-> 
       alert(":-(")

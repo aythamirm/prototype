@@ -3,6 +3,6 @@
   %b Title:
   = @project.project_title 
 
-= select_tag 'parent_id', options_for_select(nested_set_options(Project) {|i, level| "|#{'-' * level} #{i.project_title}" } ) 
+= select_tag 'parent_id', options_for_select(nested_set_options(current_user.projects) {|i| "|#{'-' * i.level} #{i.project_title}" } ) 
 = link_to 'Edit', edit_project_path(@project)  |
 = link_to 'Back', projects_path 
