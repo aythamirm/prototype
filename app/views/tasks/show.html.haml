@@ -17,10 +17,11 @@
   = @task.note 
 
 %p
-  %b calculation:
-  - suma = 0
-  - @task.interruptions.each do |valor|
-    - suma = suma + valor  
+  %b duration :
+  - debugger
+  - suma = 0.0
+  - @task.interruptions.where('interruptions.duration IS NOT NULL (?)'.each do |valor|
+    - suma = suma + valor.duration  
   = suma
 
 = link_to 'Edit', edit_task_path(@task)  |

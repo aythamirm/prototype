@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130623200204) do
+ActiveRecord::Schema.define(:version => 20130625170516) do
 
   create_table "interruptions", :force => true do |t|
     t.datetime "start_time"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130623200204) do
     t.integer  "task_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.float    "duration"
   end
 
   add_index "interruptions", ["task_id"], :name => "index_interruptions_on_task_id"
