@@ -41,6 +41,7 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
+    debugger
     @task = current_user.tasks.build(task_params)
 
     if @task.save 
@@ -87,6 +88,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:task_name, :due_date, :note, :priority, :parent_id)
+    params.require(:task).permit(:task_name,:estimated_time, :due_date, :note, :priority, :parent_id)
   end   
 end

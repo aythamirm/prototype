@@ -6,10 +6,10 @@
     %th Due date
     %th Priority
     %th Note
+    %th Estimated time
     %th 
     %th 
     %th
-
 - @nodes.each do |node| 
   %tr
     - if node.type == 'Task' 
@@ -18,6 +18,7 @@
         %td= node.due_date 
         %td= node.priority 
         %td= node.note 
+        %td= node.estimated_time 
         - case node.state
         - when 'active'
           - caption = 'pause'

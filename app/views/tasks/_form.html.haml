@@ -9,6 +9,7 @@
       - @task.errors.full_messages.each do |msg| 
         %li= msg 
   .field= f.input :task_name 
+  .field= f.input :estimated_time 
 
   .field= f.input :due_date 
   .field= f.input :priority 
