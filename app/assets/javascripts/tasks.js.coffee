@@ -51,5 +51,21 @@ $('.content').on 'click', '.start', ()->
     success:()->
       thisClicked2.removeClass('start').addClass('pause')
       thisClicked2.html('Pause')
+      thisClicked2.parent().find('.finish').show()
+    error:()->  
+      alert(":-(")
+
+$('.content').on 'click', '.finish', ()->
+  thisClicked3 = $(this)
+  taskID = $(this).parent().data('task-id')
+  finishUrl = "/tasks/#{taskID}/finish_task"
+  $.ajax
+    url: finishUrl
+    type: 'GET'
+    dataype:'json'
+    success:()->
+      thisClicked3.hide()
+      thisClicked3.parent().find('.pause').hide()
+      alert("task finished")
     error:()->  
       alert(":-(")

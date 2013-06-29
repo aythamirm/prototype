@@ -31,11 +31,13 @@ gem 'bootstrap-sass'
 gem 'devise' 
 gem 'gon'
 gem 'haml' 
+gem  'mysql2'
 gem 'rails', '3.2.13'
 gem 'simple_form'
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'state_machine'
 gem 'strong_parameters'
+
 
 
 # To use ActiveModel has_secure_password

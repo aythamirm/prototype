@@ -10,6 +10,8 @@
     %th 
     %th 
     %th
+    %th 
+    %th
 - @nodes.each do |node| 
   %tr
     - if node.type == 'Task' 
@@ -19,14 +21,22 @@
         %td= node.priority 
         %td= node.note 
         %td= node.estimated_time 
+        - change = "display:none"
+        - change2 = "display:block"
         - case node.state
         - when 'active'
           - caption = 'pause'
+          - change = "display:block" 
         - when 'paused'
-          - caption = 'resume'
+          - caption = 'resume' 
         - when 'to_do'
-          - caption = 'start'      
-        %td= link_to caption.capitalize, '#', class: caption
+          - caption = 'start'  
+        - when 'finished'
+          - change2 = "display:none"
+          - caption = 'lala'
+
+        %td= link_to caption.capitalize, '#', class: caption, style: change2
+        %td= link_to 'Finish', '#', class: 'finish', style: change 
         %td= link_to 'Show', node 
         %td= link_to 'Edit', edit_task_path(node) 
         %td= link_to 'Destroy', node, method: :delete, data: { confirm: 'Are you sure?' } 

@@ -31714,3 +31714,2732 @@ Served asset /tasks.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-27 18:45:21 +0100
 Served asset /application.js - 304 Not Modified (4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-29 10:56:33 +0100
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 11ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-06-29 10:56:33 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/devise-2.2.4/app/views/devise/shared/_links.erb (2.5ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/devise-2.2.4/app/views/devise/sessions/new.html.erb within layouts/application (63.9ms)
+Compiled tasks.js  (234ms)  (pid 3322)
+Compiled application.js  (6ms)  (pid 3322)
+  Rendered layouts/_navigation.html.haml (4.5ms)
+  Rendered layouts/_messages.html.haml (2.4ms)
+Completed 200 OK in 1290ms (Views: 1267.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /tasks.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (56ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /projects.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /style.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:35 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:36 +0100
+Served asset /projects.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:36 +0100
+Served asset /tasks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:36 +0100
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:36 +0100
+Served asset /bootstrap.js - 304 Not Modified (73ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:36 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:36 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-06-29 10:56:47 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KYG699SW0ofhM9OpMqi366IXW5+imipzm9i66QOCBPU=", "user"=>{"email"=>"aythamirm@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'aythamirm@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2013-06-29 09:56:47.457495', "sign_in_count" = 2, "updated_at" = '2013-06-29 09:56:47.461308' WHERE "users"."id" = 1[0m
+  [1m[35m (337.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 632ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-29 10:56:47 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1) AND ("nodes"."lft" < 14) ORDER BY "lft"
+  Rendered projects/_form.html.haml (25.8ms)
+  Rendered tasks/index.html.haml within layouts/application (470.6ms)
+  Rendered layouts/_navigation.html.haml (1.2ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 842ms (Views: 613.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:48 +0100
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /application.js - 304 Not Modified (67ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 10:56:49 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started POST "/tasks/3/interruptions" for 127.0.0.1 at 2013-06-29 10:57:11 +0100
+Processing by InterruptionsController#create as JSON
+  Parameters: {"interruption"=>{"name"=>"ahora", "description"=>"si", "start_time"=>"Sat Jun 29 2013 10:57:11 GMT+0100 (BST)"}, "task_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "interruptions" ("created_at", "description", "duration", "end_time", "name", "start_time", "task_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 29 Jun 2013 09:57:11 UTC +00:00], ["description", "si"], ["duration", nil], ["end_time", nil], ["name", "ahora"], ["start_time", Sat, 29 Jun 2013 09:57:11 UTC +00:00], ["task_id", 3], ["updated_at", Sat, 29 Jun 2013 09:57:11 UTC +00:00]]
+  [1m[35m (345.1ms)[0m  commit transaction
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "nodes" SET "state" = 'paused', "updated_at" = '2013-06-29 09:57:11.780882' WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 3[0m
+  [1m[35m (282.4ms)[0m  commit transaction
+Completed 200 OK in 652ms (Views: 1.0ms | ActiveRecord: 630.3ms)
+
+
+Started GET "/tasks/3/interruptions_stop?end_time=Sat+Jun+29+2013+10%3A57%3A14+GMT%2B0100+(BST)" for 127.0.0.1 at 2013-06-29 10:57:14 +0100
+Processing by InterruptionsController#stop_interruption as JSON
+  Parameters: {"end_time"=>"Sat Jun 29 2013 10:57:14 GMT+0100 (BST)", "task_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mInterruption Load (0.3ms)[0m  [1mSELECT "interruptions".* FROM "interruptions" WHERE "interruptions"."task_id" = 3 AND "interruptions"."end_time" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mUPDATE "interruptions" SET "end_time" = '2013-06-29 09:57:14.000000', "duration" = 3.0, "updated_at" = '2013-06-29 09:57:14.320528' WHERE "interruptions"."id" = 3[0m
+  [1m[35m (357.6ms)[0m  commit transaction
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "nodes" SET "state" = 'active', "updated_at" = '2013-06-29 09:57:14.684890' WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 3[0m
+  [1m[35m (273.9ms)[0m  commit transaction
+Completed 200 OK in 655ms (Views: 0.8ms | ActiveRecord: 634.3ms)
+
+
+Started GET "/tasks/7/start_task" for 127.0.0.1 at 2013-06-29 10:57:16 +0100
+Processing by TasksController#start as */*
+  Parameters: {"task_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  UPDATE "nodes" SET "state" = 'active', "updated_at" = '2013-06-29 09:57:16.912366' WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 7
+  [1m[36m (358.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 369ms (Views: 0.2ms | ActiveRecord: 360.2ms)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mInterruption Load (0.3ms)[0m  SELECT "interruptions".* FROM "interruptions" WHERE "interruptions"."task_id" = 3 AND (interruptions.duration IS (?) NOT NULL )
+  Rendered tasks/show.html.haml within layouts/application (7.4ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 157ms (Views: 151.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 10:57:28 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-29 11:53:00 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1) AND ("nodes"."lft" < 14) ORDER BY "lft"
+  Rendered projects/_form.html.haml (136.9ms)
+  Rendered tasks/index.html.haml within layouts/application (183.0ms)
+Completed 500 Internal Server Error in 642ms
+
+ActionView::Template::Error (SyntaxError: unexpected OUTDENT
+  (in /home/aythami/work/prototype/app/assets/javascripts/tasks.js.coffee)):
+    7:     %meta{:content => "", :name => "description"}
+    8:     %meta{:content => "", :name => "author"}
+    9:     = stylesheet_link_tag "application", :media => "all"
+    10:     = javascript_include_tag "application"
+    11:     = csrf_meta_tags
+    12:     = yield(:head)
+    13:   %body
+  app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___958913502_83870970'
+  app/controllers/tasks_controller.rb:8:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.4ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-29 11:55:25 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1) AND ("nodes"."lft" < 14) ORDER BY "lft"
+  Rendered projects/_form.html.haml (15.8ms)
+  Rendered tasks/index.html.haml within layouts/application (40.8ms)
+Compiled tasks.js  (69ms)  (pid 3322)
+Compiled application.js  (9ms)  (pid 3322)
+  Rendered layouts/_navigation.html.haml (1.8ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 497ms (Views: 488.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 11:55:25 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /projects.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /style.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap.js - 304 Not Modified (111ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /projects.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /application.js - 304 Not Modified (60ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 11:55:26 +0100
+Served asset /tasks.js - 200 OK (2ms)
+
+
+Started GET "/tasks/6/finish_task" for 127.0.0.1 at 2013-06-29 11:55:35 +0100
+Processing by TasksController#finish as */*
+  Parameters: {"task_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1  [["id", "6"]]
+Completed 500 Internal Server Error in 17ms
+
+StateMachine::InvalidTransition (Cannot transition state via :finish from :to_do (Reason(s): State cannot transition via "finish")):
+  app/controllers/tasks_controller.rb:88:in `finish'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.3ms)
+
+
+Started GET "/tasks/3/finish_task" for 127.0.0.1 at 2013-06-29 11:55:51 +0100
+Processing by TasksController#finish as */*
+  Parameters: {"task_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.3ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  UPDATE "nodes" SET "state" = 'finished', "updated_at" = '2013-06-29 10:55:51.181085' WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 3
+  [1m[36m (309.9ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 335ms (Views: 0.3ms | ActiveRecord: 311.3ms)
+
+
+Started GET "/tasks/2/finish_task" for 127.0.0.1 at 2013-06-29 11:56:09 +0100
+Processing by TasksController#finish as */*
+  Parameters: {"task_id"=>"2"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mUPDATE "nodes" SET "state" = 'finished', "updated_at" = '2013-06-29 10:56:09.546433' WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 2[0m
+  [1m[35m (347.3ms)[0m  commit transaction
+Completed 200 OK in 369ms (Views: 0.2ms | ActiveRecord: 348.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-29 11:58:49 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  Rendered tasks/index.html.haml within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (undefined method `capitalize' for nil:NilClass):
+    30:         - when 'to_do'
+    31:           - caption = 'start'  
+    32: 
+    33:         %td= link_to caption.capitalize, '#', class: caption
+    34:         %td= link_to 'Finish', '#', class: 'finish', style: change 
+    35:         %td= link_to 'Show', node 
+    36:         %td= link_to 'Edit', edit_task_path(node) 
+  app/views/tasks/index.html.haml:33:in `block in _app_views_tasks_index_html_haml___88335863__620728458'
+  app/views/tasks/index.html.haml:14:in `each'
+  app/views/tasks/index.html.haml:14:in `_app_views_tasks_index_html_haml___88335863__620728458'
+  app/controllers/tasks_controller.rb:8:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1[0m
+  [1m[35mNode Load (0.7ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1) AND ("nodes"."lft" < 14) ORDER BY "lft"
+  Rendered projects/_form.html.haml (14.1ms)
+  Rendered tasks/index.html.haml within layouts/application (70.5ms)
+  Rendered layouts/_navigation.html.haml (1.2ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 257ms (Views: 248.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /scaffolds.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /tasks.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:53 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:54 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:54 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:54 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:54 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:54 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:08:54 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/tasks/6/start_task" for 127.0.0.1 at 2013-06-29 12:09:06 +0100
+Processing by TasksController#start as */*
+  Parameters: {"task_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  UPDATE "nodes" SET "state" = 'active', "updated_at" = '2013-06-29 11:09:06.759539' WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 6
+  [1m[36m (307.6ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 320ms (Views: 0.4ms | ActiveRecord: 309.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mNode Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."user_id" = 1[0m
+  [1m[35mProject Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Project') AND "nodes"."user_id" = 1
+  [1m[36mNode Load (0.6ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."lft" >= 1) AND ("nodes"."lft" < 14) ORDER BY "lft"[0m
+  Rendered projects/_form.html.haml (14.7ms)
+  Rendered tasks/index.html.haml within layouts/application (62.7ms)
+  Rendered layouts/_navigation.html.haml (1.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 245ms (Views: 238.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /projects.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:09:44 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/tasks/6/finish_task" for 127.0.0.1 at 2013-06-29 12:10:29 +0100
+Processing by TasksController#finish as */*
+  Parameters: {"task_id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mUPDATE "nodes" SET "state" = 'finished', "updated_at" = '2013-06-29 11:10:29.173430' WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 6[0m
+  [1m[35m (319.8ms)[0m  commit transaction
+Completed 200 OK in 342ms (Views: 0.3ms | ActiveRecord: 321.1ms)
+
+
+Started POST "/tasks/7/interruptions" for 127.0.0.1 at 2013-06-29 12:10:44 +0100
+Processing by InterruptionsController#create as JSON
+  Parameters: {"interruption"=>{"name"=>"juan", "description"=>"sdfsd", "start_time"=>"Sat Jun 29 2013 12:10:44 GMT+0100 (BST)"}, "task_id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "interruptions" ("created_at", "description", "duration", "end_time", "name", "start_time", "task_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 29 Jun 2013 11:10:45 UTC +00:00], ["description", "sdfsd"], ["duration", nil], ["end_time", nil], ["name", "juan"], ["start_time", Sat, 29 Jun 2013 11:10:44 UTC +00:00], ["task_id", 7], ["updated_at", Sat, 29 Jun 2013 11:10:45 UTC +00:00]]
+  [1m[35m (312.7ms)[0m  commit transaction
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mUPDATE "nodes" SET "state" = 'paused', "updated_at" = '2013-06-29 11:10:45.344659' WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 7[0m
+  [1m[35m (333.9ms)[0m  commit transaction
+Completed 200 OK in 678ms (Views: 1.2ms | ActiveRecord: 649.5ms)
+
+
+Started GET "/tasks/7/interruptions_stop?end_time=Sat+Jun+29+2013+12%3A10%3A48+GMT%2B0100+(BST)" for 127.0.0.1 at 2013-06-29 12:10:48 +0100
+Processing by InterruptionsController#stop_interruption as JSON
+  Parameters: {"end_time"=>"Sat Jun 29 2013 12:10:48 GMT+0100 (BST)", "task_id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.4ms)[0m  SELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."user_id" = 1 AND "nodes"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mInterruption Load (3.7ms)[0m  [1mSELECT "interruptions".* FROM "interruptions" WHERE "interruptions"."task_id" = 7 AND "interruptions"."end_time" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mUPDATE "interruptions" SET "end_time" = '2013-06-29 11:10:48.000000', "duration" = 4.0, "updated_at" = '2013-06-29 11:10:48.088942' WHERE "interruptions"."id" = 4[0m
+  [1m[35m (366.5ms)[0m  commit transaction
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mUPDATE "nodes" SET "state" = 'active', "updated_at" = '2013-06-29 11:10:48.468724' WHERE "nodes"."type" IN ('Task') AND "nodes"."id" = 7[0m
+  [1m[35m (316.0ms)[0m  commit transaction
+Completed 200 OK in 725ms (Views: 0.8ms | ActiveRecord: 689.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (320.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (423.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (21.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20130619154044)
+  [1m[35m (248.4ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (513.3ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (446.7ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36m (133.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130619154044')[0m
+Migrating to CreateNodes (20130619163500)
+  [1m[35m (602.8ms)[0m  CREATE TABLE `nodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `project_title` varchar(255), `task_name` varchar(255), `due_date` date, `priority` int(11), `note` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (102.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130619163500')[0m
+Migrating to AddReferencesToNodes (20130619163540)
+  [1m[35m (0.3ms)[0m  ALTER TABLE `nodes` ADD `user_id` reference
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'reference' at line 1: ALTER TABLE `nodes` ADD `user_id` reference
+Connecting to database specified by database.yml
+  [1m[36m (2.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20130619154044)
+Migrating to CreateNodes (20130619163500)
+Migrating to AddReferencesToNodes (20130619163540)
+  [1m[35m (499.5ms)[0m  ALTER TABLE `nodes` ADD `user_id` int(11)
+  [1m[36m (426.0ms)[0m  [1mCREATE INDEX `index_nodes_on_user_id` ON `nodes` (`user_id`)[0m
+  [1m[35m (100.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130619163540')
+Migrating to AddHierachyToNodes (20130619170657)
+  [1m[36m (491.7ms)[0m  [1mALTER TABLE `nodes` ADD `rgt` int(11)[0m
+  [1m[35m (505.5ms)[0m  ALTER TABLE `nodes` ADD `lft` int(11)
+  [1m[36m (492.9ms)[0m  [1mALTER TABLE `nodes` ADD `parent_id` int(11)[0m
+  [1m[35m (110.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130619170657')
+Migrating to CreateInterruptions (20130622135828)
+  [1m[36m (252.5ms)[0m  [1mCREATE TABLE `interruptions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `start_time` datetime, `end_time` datetime, `name` varchar(255), `description` text, `task_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (444.9ms)[0m  CREATE INDEX `index_interruptions_on_task_id` ON `interruptions` (`task_id`)
+  [1m[36m (89.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130622135828')[0m
+Migrating to AddStateTotask (20130623150736)
+  [1m[35m (493.7ms)[0m  ALTER TABLE `nodes` ADD `state` varchar(255)
+  [1m[36m (86.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130623150736')[0m
+Migrating to AddDurationToNode (20130623200204)
+  [1m[35m (491.5ms)[0m  ALTER TABLE `nodes` ADD `duration` float
+  [1m[36m (77.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130623200204')[0m
+Migrating to AddDurationToInterruption (20130625170516)
+  [1m[35m (526.9ms)[0m  ALTER TABLE `interruptions` ADD `duration` float
+  [1m[36m (77.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130625170516')[0m
+Migrating to AddEstimatedTimeToTask (20130627162818)
+  [1m[35m (491.1ms)[0m  ALTER TABLE `nodes` ADD `estimated_time` float
+  [1m[36m (76.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130627162818')[0m
+  [1m[35m (0.6ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-29 12:50:09 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 401 Unauthorized in 163ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-06-29 12:50:10 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/devise-2.2.4/app/views/devise/shared/_links.erb (3.1ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/devise-2.2.4/app/views/devise/sessions/new.html.erb within layouts/application (102.3ms)
+  Rendered layouts/_navigation.html.haml (9.2ms)
+  Rendered layouts/_messages.html.haml (3.7ms)
+Completed 200 OK in 586ms (Views: 561.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /application.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /projects.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /style.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /tasks.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /jquery.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:11 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:12 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:12 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:12 +0100
+Served asset /bootstrap.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:12 +0100
+Served asset /projects.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:12 +0100
+Served asset /tasks.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:12 +0100
+Served asset /application.js - 304 Not Modified (45ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-06-29 12:50:16 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/devise-2.2.4/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/devise-2.2.4/app/views/devise/registrations/new.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_navigation.html.haml (2.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 199ms (Views: 197.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:16 +0100
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:16 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (84ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:17 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-06-29 12:50:36 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KYG699SW0ofhM9OpMqi366IXW5+imipzm9i66QOCBPU=", "user"=>{"email"=>"aythamirm@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (4.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'aythamirm@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (3.8ms)[0m  INSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2013-06-29 11:50:37', NULL, NULL, 'aythamirm@gmail.com', '$2a$10$XLEo/aSFseyONQPtkpbJc.x8nGnrjzU8qPQYTMRXb0OjQjTq/mwkG', NULL, NULL, NULL, NULL, NULL, 0, '2013-06-29 11:50:37')
+  [1m[36mNode Load (1.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` ORDER BY `nodes`.`rgt` desc LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `nodes` (`created_at`, `due_date`, `duration`, `estimated_time`, `lft`, `note`, `parent_id`, `priority`, `project_title`, `rgt`, `state`, `task_name`, `type`, `updated_at`, `user_id`) VALUES ('2013-06-29 11:50:37', NULL, NULL, NULL, 1, NULL, NULL, NULL, '/', 2, NULL, NULL, 'Project', '2013-06-29 11:50:37', 1)
+  [1m[36m (127.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2013-06-29 11:50:37', `current_sign_in_at` = '2013-06-29 11:50:37', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2013-06-29 11:50:37' WHERE `users`.`id` = 1[0m
+  [1m[35m (115.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 924ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-29 12:50:37 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (6.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (1.5ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.6ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (3.7ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 2) ORDER BY `lft`
+  Rendered projects/_form.html.haml (48.3ms)
+  Rendered tasks/index.html.haml within layouts/application (761.2ms)
+  Rendered layouts/_navigation.html.haml (1.7ms)
+  Rendered layouts/_messages.html.haml (0.4ms)
+Completed 200 OK in 1090ms (Views: 968.8ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:38 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:38 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:38 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:39 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.5ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1 LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.3ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 2) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (50.8ms)
+  Rendered tasks/new.html.haml within layouts/application (61.5ms)
+  Rendered layouts/_navigation.html.haml (1.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 332ms (Views: 280.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:43 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2013-06-29 12:50:57 +0100
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KYG699SW0ofhM9OpMqi366IXW5+imipzm9i66QOCBPU=", "task"=>{"task_name"=>"nueva", "estimated_time"=>"2", "due_date(1i)"=>"2013", "due_date(2i)"=>"6", "due_date(3i)"=>"29", "priority"=>"1", "note"=>"sfdsf", "parent_id"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (4.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mNode Load (0.7ms)[0m  [1mSELECT `nodes`.* FROM `nodes` ORDER BY `nodes`.`rgt` desc LIMIT 1[0m
+  [1m[35mProject Load (0.5ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`id` = 1 LIMIT 1 FOR UPDATE
+  [1m[36mSQL (12.1ms)[0m  [1mINSERT INTO `nodes` (`created_at`, `due_date`, `duration`, `estimated_time`, `lft`, `note`, `parent_id`, `priority`, `project_title`, `rgt`, `state`, `task_name`, `type`, `updated_at`, `user_id`) VALUES ('2013-06-29 11:50:57', '2013-06-29', NULL, 2.0, 3, 'sfdsf', 1, 1, NULL, 4, 'to_do', 'nueva', 'Task', '2013-06-29 11:50:57', 1)[0m
+  [1m[35mNode Load (0.6ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`id` = 1 ORDER BY `lft` LIMIT 1
+  [1m[36mTask Load (4.5ms)[0m  [1mSELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`id` = 2 LIMIT 1 FOR UPDATE[0m
+  [1m[35mSQL (9.0ms)[0m  UPDATE `nodes` SET `lft` = CASE WHEN `lft` BETWEEN 2 AND 2 THEN `lft` + 4 - 2 WHEN `lft` BETWEEN 3 AND 4 THEN `lft` + 2 - 3 ELSE `lft` END, `rgt` = CASE WHEN `rgt` BETWEEN 2 AND 2 THEN `rgt` + 4 - 2 WHEN `rgt` BETWEEN 3 AND 4 THEN `rgt` + 2 - 3 ELSE `rgt` END, `parent_id` = CASE WHEN id = 2 THEN 1 ELSE `parent_id` END WHERE ((`lft` BETWEEN 2 AND 4) OR (`rgt` BETWEEN 2 AND 4)) ORDER BY `lft`
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`id` = 1 LIMIT 1 FOR UPDATE[0m
+  [1m[35mNode Load (4.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 3) AND (`nodes`.`lft` < 4) AND (`nodes`.id != 2) ORDER BY `lft`
+  [1m[36mTask Load (1.8ms)[0m  [1mSELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`id` = 2 LIMIT 1 FOR UPDATE[0m
+  [1m[35m (90.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 191ms (ActiveRecord: 129.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-29 12:50:57 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (3.8ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.6ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered projects/_form.html.haml (12.0ms)
+  Rendered tasks/index.html.haml within layouts/application (25.5ms)
+  Rendered layouts/_navigation.html.haml (1.4ms)
+  Rendered layouts/_messages.html.haml (0.6ms)
+Completed 200 OK in 151ms (Views: 137.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:57 +0100
+Served asset /application.css - 304 Not Modified (146ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:57 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:57 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:57 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:57 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:50:57 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:57 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:50:58 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks/2/start_task" for 127.0.0.1 at 2013-06-29 12:51:02 +0100
+Processing by TasksController#start as */*
+  Parameters: {"task_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.8ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`user_id` = 1 AND `nodes`.`id` = 2 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  UPDATE `nodes` SET `state` = 'active', `updated_at` = '2013-06-29 11:51:03' WHERE `nodes`.`type` IN ('Task') AND `nodes`.`id` = 2
+  [1m[36m (87.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 103ms (Views: 0.3ms | ActiveRecord: 89.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (0.7ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.7ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.5ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (19.5ms)
+  Rendered tasks/index.html.haml within layouts/application (34.5ms)
+  Rendered layouts/_navigation.html.haml (1.4ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 213ms (Views: 205.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:51:26 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-29 12:54:54 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (0.2ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.3ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (17.8ms)
+  Rendered tasks/index.html.haml within layouts/application (27.7ms)
+Compiled tasks.js  (424ms)  (pid 4814)
+Compiled application.js  (8ms)  (pid 4814)
+  Rendered layouts/_navigation.html.haml (1.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 768ms (Views: 760.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:54:55 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:54:55 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (131ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:54:55 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:54:55 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:54:55 +0100
+Served asset /projects.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:54:55 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:55 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:55 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:55 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /tasks.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:54:56 +0100
+Served asset /application.js - 304 Not Modified (49ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2013-06-29 12:54:59 +0100
+Processing by TasksController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProject Load (0.6ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.2ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered tasks/_form.html.haml (121.4ms)
+  Rendered tasks/new.html.haml within layouts/application (124.5ms)
+  Rendered layouts/_navigation.html.haml (1.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 235ms (Views: 229.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (101ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /tasks.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:00 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KYG699SW0ofhM9OpMqi366IXW5+imipzm9i66QOCBPU=", "task"=>{"task_name"=>"nueva 2", "estimated_time"=>"1", "due_date(1i)"=>"2013", "due_date(2i)"=>"6", "due_date(3i)"=>"29", "priority"=>"-1", "note"=>"sdfsfs", "parent_id"=>"1"}, "commit"=>"Create Task"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mNode Load (0.7ms)[0m  SELECT `nodes`.* FROM `nodes` ORDER BY `nodes`.`rgt` desc LIMIT 1
+  [1m[36mProject Load (3.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`id` = 1 LIMIT 1 FOR UPDATE[0m
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO `nodes` (`created_at`, `due_date`, `duration`, `estimated_time`, `lft`, `note`, `parent_id`, `priority`, `project_title`, `rgt`, `state`, `task_name`, `type`, `updated_at`, `user_id`) VALUES ('2013-06-29 11:55:13', '2013-06-29', NULL, 1.0, 5, 'sdfsfs', 1, -1, NULL, 6, 'to_do', 'nueva 2', 'Task', '2013-06-29 11:55:13', 1)
+  [1m[36mNode Load (0.5ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`id` = 1 ORDER BY `lft` LIMIT 1[0m
+  [1m[35mTask Load (1.1ms)[0m  SELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`id` = 3 LIMIT 1 FOR UPDATE
+  [1m[36mSQL (3.2ms)[0m  [1mUPDATE `nodes` SET `lft` = CASE WHEN `lft` BETWEEN 4 AND 4 THEN `lft` + 6 - 4 WHEN `lft` BETWEEN 5 AND 6 THEN `lft` + 4 - 5 ELSE `lft` END, `rgt` = CASE WHEN `rgt` BETWEEN 4 AND 4 THEN `rgt` + 6 - 4 WHEN `rgt` BETWEEN 5 AND 6 THEN `rgt` + 4 - 5 ELSE `rgt` END, `parent_id` = CASE WHEN id = 3 THEN 1 ELSE `parent_id` END WHERE ((`lft` BETWEEN 4 AND 6) OR (`rgt` BETWEEN 4 AND 6)) ORDER BY `lft`[0m
+  [1m[35mProject Load (0.7ms)[0m  SELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`id` = 1 LIMIT 1 FOR UPDATE
+  [1m[36mNode Load (0.5ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 5) AND (`nodes`.`lft` < 6) AND (`nodes`.id != 3) ORDER BY `lft`[0m
+  [1m[35mTask Load (0.7ms)[0m  SELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`id` = 3 LIMIT 1 FOR UPDATE
+  [1m[36m (116.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 176ms (ActiveRecord: 130.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (1.8ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.9ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.9ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 6) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (14.5ms)
+  Rendered tasks/index.html.haml within layouts/application (26.7ms)
+  Rendered layouts/_navigation.html.haml (2.1ms)
+  Rendered layouts/_messages.html.haml (0.5ms)
+Completed 200 OK in 249ms (Views: 239.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:13 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /tasks.js - 304 Not Modified (118ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:14 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/tasks/3/start_task" for 127.0.0.1 at 2013-06-29 12:55:29 +0100
+Processing by TasksController#start as */*
+  Parameters: {"task_id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mTask Load (3.2ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`user_id` = 1 AND `nodes`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE `nodes` SET `state` = 'active', `updated_at` = '2013-06-29 11:55:29' WHERE `nodes`.`type` IN ('Task') AND `nodes`.`id` = 3[0m
+  [1m[35m (246.5ms)[0m  COMMIT
+Completed 200 OK in 261ms (Views: 0.3ms | ActiveRecord: 250.6ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2013-06-29 12:55:48 +0100
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KYG699SW0ofhM9OpMqi366IXW5+imipzm9i66QOCBPU=", "project"=>{"project_title"=>"prueba1", "parent_id"=>"1"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mNode Load (0.7ms)[0m  [1mSELECT `nodes`.* FROM `nodes` ORDER BY `nodes`.`rgt` desc LIMIT 1[0m
+  [1m[35mProject Load (0.7ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`id` = 1 LIMIT 1 FOR UPDATE
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `nodes` (`created_at`, `due_date`, `duration`, `estimated_time`, `lft`, `note`, `parent_id`, `priority`, `project_title`, `rgt`, `state`, `task_name`, `type`, `updated_at`, `user_id`) VALUES ('2013-06-29 11:55:48', NULL, NULL, NULL, 7, NULL, 1, NULL, 'prueba1', 8, NULL, NULL, 'Project', '2013-06-29 11:55:48', 1)[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`id` = 1 ORDER BY `lft` LIMIT 1
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`id` = 4 LIMIT 1 FOR UPDATE[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `nodes` SET `lft` = CASE WHEN `lft` BETWEEN 6 AND 6 THEN `lft` + 8 - 6 WHEN `lft` BETWEEN 7 AND 8 THEN `lft` + 6 - 7 ELSE `lft` END, `rgt` = CASE WHEN `rgt` BETWEEN 6 AND 6 THEN `rgt` + 8 - 6 WHEN `rgt` BETWEEN 7 AND 8 THEN `rgt` + 6 - 7 ELSE `rgt` END, `parent_id` = CASE WHEN id = 4 THEN 1 ELSE `parent_id` END WHERE ((`lft` BETWEEN 6 AND 8) OR (`rgt` BETWEEN 6 AND 8)) ORDER BY `lft`
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`id` = 1 LIMIT 1 FOR UPDATE[0m
+  [1m[35mNode Load (0.6ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 7) AND (`nodes`.`lft` < 8) AND (`nodes`.id != 4) ORDER BY `lft`
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`id` = 4 LIMIT 1 FOR UPDATE[0m
+  [1m[35m (123.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects/4
+Completed 302 Found in 160ms (ActiveRecord: 130.0ms)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2013-06-29 12:55:48 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.8ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1 AND `nodes`.`id` = 4 LIMIT 1
+  [1m[36mProject Load (2.3ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.6ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 8) ORDER BY `lft`
+  Rendered projects/show.html.haml within layouts/application (12.1ms)
+  Rendered layouts/_navigation.html.haml (1.2ms)
+  Rendered layouts/_messages.html.haml (0.4ms)
+Completed 200 OK in 120ms (Views: 110.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:48 +0100
+Served asset /application.css - 304 Not Modified (79ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:49 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:50 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:50 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:50 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:50 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:55:50 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (4.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (1.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  Rendered projects/index.html.haml within layouts/application (13.3ms)
+  Rendered layouts/_navigation.html.haml (1.4ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 251ms (Views: 238.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:00 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:01 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:01 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:01 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:01 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:01 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:01 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:01 +0100
+Served asset /tasks.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:01 +0100
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (1.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 8) ORDER BY `lft`
+  Rendered projects/_form.html.haml (14.6ms)
+  Rendered tasks/index.html.haml within layouts/application (27.6ms)
+  Rendered layouts/_navigation.html.haml (1.5ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 130ms (Views: 121.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /application.css - 304 Not Modified (134ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /tasks.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-06-29 12:56:24 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (1.5ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.3ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 8) ORDER BY `lft`
+  Rendered projects/_form.html.haml (18.0ms)
+  Rendered tasks/index.html.haml within layouts/application (44.0ms)
+  Rendered layouts/_navigation.html.haml (1.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 218ms (Views: 206.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:25 +0100
+Served asset /application.js - 304 Not Modified (100ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:26 +0100
+Served asset /bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:26 +0100
+Served asset /bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:26 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:26 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:26 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:27 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:27 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:27 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:27 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:27 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:27 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:27 +0100
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.6ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1 LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 8) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (54.8ms)
+  Rendered tasks/new.html.haml within layouts/application (58.7ms)
+  Rendered layouts/_navigation.html.haml (1.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 267ms (Views: 257.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:43 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:44 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:44 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:44 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:44 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:44 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:44 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:44 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:44 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-29 12:56:45 +0100
+Served asset /application.js - 304 Not Modified (2ms)

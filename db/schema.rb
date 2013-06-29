@@ -26,8 +26,25 @@ ActiveRecord::Schema.define(:version => 20130627162818) do
 
   add_index "interruptions", ["task_id"], :name => "index_interruptions_on_task_id"
 
-# Could not dump table "nodes" because of following StandardError
-#   Unknown type 'reference' for column 'user_id'
+  create_table "nodes", :force => true do |t|
+    t.string   "type"
+    t.string   "project_title"
+    t.string   "task_name"
+    t.date     "due_date"
+    t.integer  "priority"
+    t.text     "note"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "user_id"
+    t.integer  "rgt"
+    t.integer  "lft"
+    t.integer  "parent_id"
+    t.string   "state"
+    t.float    "duration"
+    t.float    "estimated_time"
+  end
+
+  add_index "nodes", ["user_id"], :name => "index_nodes_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

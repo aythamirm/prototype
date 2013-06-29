@@ -41,7 +41,6 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    debugger
     @task = current_user.tasks.build(task_params)
 
     if @task.save 
@@ -83,7 +82,12 @@ class TasksController < ApplicationController
   def start
      current_user.tasks.find(params[:task_id]).activate!
      render json: true
-  end  
+  end 
+
+  def finish 
+    @task = current_user.tasks.find(params[:task_id]).finish!
+    render json: true
+  end 
 
   private
 
