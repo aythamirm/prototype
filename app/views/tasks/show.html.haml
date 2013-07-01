@@ -19,7 +19,7 @@
 %p
   %b duration :
   - suma = 0.0
-  - @task.interruptions.where('interruptions.duration  IS (?) NOT NULL ').each do |valor|
+  - @task.interruptions.where('interruptions.duration IS NOT NULL  ').each do |valor|
     - suma = suma + valor.duration  
   = suma
 
