@@ -7,7 +7,7 @@
     %th Priority
     %th Note
     %th Estimated time
-    %th 
+    %th ShowDescription
     %th 
     %th
     %th 
@@ -40,6 +40,9 @@
         %td= link_to 'Show', node 
         %td= link_to 'Edit', edit_task_path(node) 
         %td= link_to 'Destroy', node, method: :delete, data: { confirm: 'Are you sure?' } 
+        - if node.type == 'Task'
+          %td= link_to 'ShowDescription', '#', class: 'link-show-description'
+          .hidden-description(style="display:none")= node.note 
     - else 
       %td= node.project_title 
       %td= link_to 'Edit', edit_project_path(node) if node.type == 'project'
@@ -53,3 +56,5 @@
 = link_to 'New Task', new_task_path 
 .sidebar(style="display:inline")
   = render 'projects/form' 
+
+
