@@ -1,22 +1,25 @@
-= simple_form_for(@task) do |f| 
-  - if @task.errors.any? 
-    #error_explanation
-      %h2
-        = pluralize(@task.errors.count, "error") 
-        prohibited this task from being saved:
+.modal.hide.fade#NewtaskModal
+  .modal-header
+    %button.close(data-dismiss="modal" aria-hidden="true") &times
+  .modal-body
+    = simple_form_for(@task) do |f| 
+      - if @task.errors.any? 
+        #error_explanation
+          %h2
+            = pluralize(@task.errors.count, "error") 
+            prohibited this task from being saved:
 
-      %ul
-      - @task.errors.full_messages.each do |msg| 
-        %li= msg 
-  .field= f.input :task_name 
-  .field= f.input :estimated_time 
+          %ul
+          - @task.errors.full_messages.each do |msg| 
+            %li= msg 
+      .field= f.input :task_name 
+      .field= f.input :estimated_time 
 
-  .field= f.input :due_date 
-  .field= f.input :priority 
-  
-  .field= f.input :note 
-  
-  %div= f.select :parent_id, nested_set_options(current_user.projects, nil, method: :type, value: 'Task') {|i| "#{'-' * i.level} #{i.project_title}"  if i.type == 'Project' } 
-  
-  .actions= f.submit 
-
+      .field= f.input :due_date 
+      .field= f.input :priority 
+      
+      .field= f.input :note 
+      
+      %div= f.select :parent_id, nested_set_options(current_user.projects, nil, method: :type, value: 'Task') {|i| "#{'-' * i.level} #{i.project_title}"  if i.type == 'Project' } 
+      .modal-footer  
+        .actions= f.submit  

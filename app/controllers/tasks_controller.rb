@@ -4,6 +4,7 @@ class TasksController < ApplicationController
   def index
     @interruption = Interruption.new 
     @nodes = current_user.nodes.all
+    @task = Task.new
     @project = Project.new
     respond_to do |format|
       format.html # index.html.erb
