@@ -2,10 +2,12 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
+    debugger
     @interruption = Interruption.new 
     @nodes = current_user.nodes.all
     @task = Task.new
     @project = Project.new
+    @filter = params[:filter].present? ? Filter.new(params[:filter]) : Filter.new
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @nodes }

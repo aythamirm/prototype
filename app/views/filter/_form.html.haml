@@ -1,0 +1,11 @@
+= simple_form_for @filter, url: tasks_path, method: 'get' do |f|
+  .field= f.input :state, collection: Task.state_machine.states.map(&:name), required: false
+  .field= f.input :q, required: false
+  .actions= f.submit  
+
+
+
+    
+
+
+

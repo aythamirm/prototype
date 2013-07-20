@@ -44462,3 +44462,1403 @@ Served asset /application.js - 304 Not Modified (3ms)
 
 Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-07-08 21:02:24 +0100
 Served asset /tasks.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (98.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (76.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (2.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20130619154044)
+  [1m[35m (7.3ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (71.0ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (23.2ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36m (4.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130619154044')[0m
+Migrating to CreateNodes (20130619163500)
+  [1m[35m (14.8ms)[0m  CREATE TABLE `nodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `project_title` varchar(255), `task_name` varchar(255), `due_date` date, `priority` int(11), `note` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130619163500')[0m
+Migrating to AddReferencesToNodes (20130619163540)
+  [1m[35m (38.0ms)[0m  ALTER TABLE `nodes` ADD `user_id` int(11)
+  [1m[36m (22.8ms)[0m  [1mCREATE INDEX `index_nodes_on_user_id` ON `nodes` (`user_id`)[0m
+  [1m[35m (3.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130619163540')
+Migrating to AddHierachyToNodes (20130619170657)
+  [1m[36m (16.9ms)[0m  [1mALTER TABLE `nodes` ADD `rgt` int(11)[0m
+  [1m[35m (13.4ms)[0m  ALTER TABLE `nodes` ADD `lft` int(11)
+  [1m[36m (10.0ms)[0m  [1mALTER TABLE `nodes` ADD `parent_id` int(11)[0m
+  [1m[35m (2.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130619170657')
+Migrating to CreateInterruptions (20130622135828)
+  [1m[36m (6.3ms)[0m  [1mCREATE TABLE `interruptions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `start_time` datetime, `end_time` datetime, `name` varchar(255), `description` text, `task_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (24.3ms)[0m  CREATE INDEX `index_interruptions_on_task_id` ON `interruptions` (`task_id`)
+  [1m[36m (2.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130622135828')[0m
+Migrating to AddStateTotask (20130623150736)
+  [1m[35m (9.3ms)[0m  ALTER TABLE `nodes` ADD `state` varchar(255)
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130623150736')[0m
+Migrating to AddDurationToNode (20130623200204)
+  [1m[35m (12.6ms)[0m  ALTER TABLE `nodes` ADD `duration` float
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130623200204')[0m
+Migrating to AddDurationToInterruption (20130625170516)
+  [1m[35m (8.2ms)[0m  ALTER TABLE `interruptions` ADD `duration` float
+  [1m[36m (2.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130625170516')[0m
+Migrating to AddEstimatedTimeToTask (20130627162818)
+  [1m[35m (15.8ms)[0m  ALTER TABLE `nodes` ADD `estimated_time` float
+  [1m[36m (2.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130627162818')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-20 09:03:52 +0100
+Processing by TasksController#index as HTML
+Completed 401 Unauthorized in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-07-20 09:03:52 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (223.4ms)
+  Rendered layouts/_navigation.html.haml (2.2ms)
+  Rendered layouts/_messages.html.haml (1.3ms)
+Completed 200 OK in 411ms (Views: 365.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /application.css - 200 OK (84ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap_and_overriders.css - 200 OK (7ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /projects.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /scaffolds.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /style.css - 200 OK (1ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /tasks.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-transition.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-affix.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-alert.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-carousel.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-button.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-collapse.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-dropdown.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-modal.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-scrollspy.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-tab.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-tooltip.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-popover.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap-typeahead.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /bootstrap.js - 200 OK (30ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /projects.js - 200 OK (1ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /tasks.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-20 09:03:53 +0100
+Served asset /application.js - 200 OK (20ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-07-20 09:04:08 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-07-20 09:05:03 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HmVjA+itY8j/VJm63EmOFjR6VaKY6SExUymEF09QzCk=", "user"=>{"email"=>"aythamirm@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (17.9ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'aythamirm@gmail.com' LIMIT 1
+  [1m[36mSQL (7.6ms)[0m  [1mINSERT INTO `users` (`created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2013-07-20 08:05:03', NULL, NULL, 'aythamirm@gmail.com', '$2a$10$tozixk3umT7lgJmbelrWK.4yUF9XVQeKkCwpis/yl8E9igKbG35cy', NULL, NULL, NULL, NULL, NULL, 0, '2013-07-20 08:05:03')[0m
+  [1m[35mNode Load (29.3ms)[0m  SELECT `nodes`.* FROM `nodes` ORDER BY `nodes`.`rgt` desc LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `nodes` (`created_at`, `due_date`, `duration`, `estimated_time`, `lft`, `note`, `parent_id`, `priority`, `project_title`, `rgt`, `state`, `task_name`, `type`, `updated_at`, `user_id`) VALUES ('2013-07-20 08:05:03', NULL, NULL, NULL, 1, NULL, NULL, NULL, '/', 2, NULL, NULL, 'Project', '2013-07-20 08:05:03', 1)[0m
+  [1m[35m (3.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-07-20 08:05:03', `current_sign_in_at` = '2013-07-20 08:05:03', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2013-07-20 08:05:03' WHERE `users`.`id` = 1
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 366ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-20 09:05:03 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (1.2ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.4ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.4ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 2) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (16.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 2) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (50.0ms)
+  Rendered tasks/index.html.haml within layouts/application (77.0ms)
+  Rendered layouts/_navigation.html.haml (0.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 183ms (Views: 115.0ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2013-07-20 09:05:30 +0100
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HmVjA+itY8j/VJm63EmOFjR6VaKY6SExUymEF09QzCk=", "task"=>{"task_name"=>"task1", "estimated_time"=>"1", "due_date(1i)"=>"2013", "due_date(2i)"=>"7", "due_date(3i)"=>"20", "priority"=>"1", "note"=>"dsfsdfsfsdfsf", "parent_id"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mNode Load (0.5ms)[0m  [1mSELECT `nodes`.* FROM `nodes` ORDER BY `nodes`.`rgt` desc LIMIT 1[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`id` = 1 LIMIT 1 FOR UPDATE
+  [1m[36mSQL (89.9ms)[0m  [1mINSERT INTO `nodes` (`created_at`, `due_date`, `duration`, `estimated_time`, `lft`, `note`, `parent_id`, `priority`, `project_title`, `rgt`, `state`, `task_name`, `type`, `updated_at`, `user_id`) VALUES ('2013-07-20 08:05:30', '2013-07-20', NULL, 1.0, 3, 'dsfsdfsfsdfsf', 1, 1, NULL, 4, 'to_do', 'task1', 'Task', '2013-07-20 08:05:30', 1)[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`id` = 1 ORDER BY `lft` LIMIT 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`id` = 2 LIMIT 1 FOR UPDATE[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE `nodes` SET `lft` = CASE WHEN `lft` BETWEEN 2 AND 2 THEN `lft` + 4 - 2 WHEN `lft` BETWEEN 3 AND 4 THEN `lft` + 2 - 3 ELSE `lft` END, `rgt` = CASE WHEN `rgt` BETWEEN 2 AND 2 THEN `rgt` + 4 - 2 WHEN `rgt` BETWEEN 3 AND 4 THEN `rgt` + 2 - 3 ELSE `rgt` END, `parent_id` = CASE WHEN id = 2 THEN 1 ELSE `parent_id` END WHERE ((`lft` BETWEEN 2 AND 4) OR (`rgt` BETWEEN 2 AND 4)) ORDER BY `lft`
+  [1m[36mProject Load (0.9ms)[0m  [1mSELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`id` = 1 LIMIT 1 FOR UPDATE[0m
+  [1m[35mNode Load (0.3ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 3) AND (`nodes`.`lft` < 4) AND (`nodes`.id != 2) ORDER BY `lft`
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT `nodes`.`lft`, `nodes`.`rgt`, `nodes`.`parent_id` FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`id` = 2 LIMIT 1 FOR UPDATE[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 123ms (ActiveRecord: 100.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 09:05:30 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.5ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered projects/_form.html.haml (6.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered tasks/_form.html.haml (11.9ms)
+  Rendered tasks/index.html.haml within layouts/application (58.2ms)
+  Rendered layouts/_navigation.html.haml (0.6ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 105ms (Views: 99.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/2/start_task" for 127.0.0.1 at 2013-07-20 09:05:37 +0100
+Processing by TasksController#start as */*
+  Parameters: {"task_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`user_id` = 1 AND `nodes`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE `nodes` SET `state` = 'active', `updated_at` = '2013-07-20 08:05:37' WHERE `nodes`.`type` IN ('Task') AND `nodes`.`id` = 2[0m
+  [1m[35m (25.4ms)[0m  COMMIT
+Completed 200 OK in 35ms (Views: 0.5ms | ActiveRecord: 26.3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:47:25 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (1.9ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered projects/_form.html.haml (15.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered tasks/_form.html.haml (27.4ms)
+ERROR: compiling _app_views_filter__form_html_haml__2308356117730093412_70171243944300 RAISED /home/aythami/works/prototype/app/views/filter/_form.html.haml:2: syntax error, unexpected tAMPER, expecting ')'
+...Task.state_machine.states.map &:name
+...                               ^
+Function body:           def _app_views_filter__form_html_haml__2308356117730093412_70171243944300(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "filter/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;haml_temp =  simple_form @filter, url: tasks_path do |f|
+_hamlout.push_text("<div class='field'>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((f.input :state, collection: Task.state_machine.states.map &:name
+));}</div>\n<div class='field'>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((f.input :q
+));}</div>\n<div class='actions'>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((f.submit
+));}</div>\n", 0, false);end;_hamlout.buffer << _hamlout.format_script_false_false_false_true_false_false_false(haml_temp);_hamlout.push_text("\n", 0, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `module_eval'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `compile'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/haml-4.0.3/lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/haml-4.0.3/lib/haml/helpers.rb:89:in `non_haml'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/haml-4.0.3/lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+/home/aythami/works/prototype/app/views/tasks/index.html.haml:61:in `_app_views_tasks_index_html_haml___3400279150450251623_70171415434840'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/aythami/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/home/aythami/works/prototype/app/controllers/tasks_controller.rb:11:in `index'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:425:in `_run__2218205861991249386__process_action__1945932794493331052__callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__1256883461030707371__call__2120908580253256302__callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/aythami/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/aythami/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/aythami/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered filter/_form.html.haml (2.8ms)
+  Rendered tasks/index.html.haml within layouts/application (70.9ms)
+Completed 500 Internal Server Error in 13513ms
+
+ActionView::Template::Error (/home/aythami/works/prototype/app/views/filter/_form.html.haml:2: syntax error, unexpected tAMPER, expecting ')'
+...Task.state_machine.states.map &:name
+...                               ^):
+    1: = simple_form @filter, url: tasks_path do |f|
+    2:   .field= f.input :state, collection: Task.state_machine.states.map &:name
+    3:   .field= f.input :q
+    4:   .actions= f.submit  
+    5: 
+  app/views/tasks/index.html.haml:61:in `_app_views_tasks_index_html_haml___3400279150450251623_70171415434840'
+  app/controllers/tasks_controller.rb:11:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:48:37 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (0.2ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.2ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (15.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (45.7ms)
+  Rendered filter/_form.html.haml (24.0ms)
+  Rendered tasks/index.html.haml within layouts/application (102.4ms)
+Completed 500 Internal Server Error in 5040ms
+
+ActionView::Template::Error (undefined method `simple_form' for #<#<Class:0x007fa41c9410c0>:0x007fa40c137650>):
+    1: = simple_form @filter, url: tasks_path do |f|
+    2:   .field= f.input :state, collection: Task.state_machine.states.map(&:name)
+    3:   .field= f.input :q
+    4:   .actions= f.submit  
+  app/views/filter/_form.html.haml:1:in `_app_views_filter__form_html_haml__2308356117730093412_70171410681940'
+  app/views/tasks/index.html.haml:61:in `_app_views_tasks_index_html_haml___3400279150450251623_70171415434840'
+  app/controllers/tasks_controller.rb:11:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:49:01 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.3ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered projects/_form.html.haml (17.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered tasks/_form.html.haml (85.0ms)
+  Rendered filter/_form.html.haml (20.6ms)
+  Rendered tasks/index.html.haml within layouts/application (140.1ms)
+Completed 500 Internal Server Error in 6678ms
+
+ActionView::Template::Error (undefined method `simple_form_tag' for #<#<Class:0x007fa41c9410c0>:0x007fa41c239778>):
+    1: = simple_form_tag @filter, url: tasks_path do |f|
+    2:   .field= f.input :state, collection: Task.state_machine.states.map(&:name)
+    3:   .field= f.input :q
+    4:   .actions= f.submit  
+  app/views/filter/_form.html.haml:1:in `_app_views_filter__form_html_haml__2308356117730093412_70171244132460'
+  app/views/tasks/index.html.haml:61:in `_app_views_tasks_index_html_haml___3400279150450251623_70171415434840'
+  app/controllers/tasks_controller.rb:11:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:49:49 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (1.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (12.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (26.9ms)
+  Rendered filter/_form.html.haml (3.4ms)
+  Rendered tasks/index.html.haml within layouts/application (56.2ms)
+Completed 500 Internal Server Error in 10552ms
+
+ActionView::Template::Error (undefined method `model_name' for Filter:Class):
+    1: = simple_form_for @filter, url: tasks_path do |f|
+    2:   .field= f.input :state, collection: Task.state_machine.states.map(&:name)
+    3:   .field= f.input :q
+    4:   .actions= f.submit  
+  app/views/filter/_form.html.haml:1:in `_app_views_filter__form_html_haml__2308356117730093412_70171276817600'
+  app/views/tasks/index.html.haml:61:in `_app_views_tasks_index_html_haml___3400279150450251623_70171415434840'
+  app/controllers/tasks_controller.rb:11:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:52:43 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+Completed 500 Internal Server Error in 4323ms
+
+NameError (uninitialized constant Filter::Naming):
+  app/models/filter.rb:2:in `<class:Filter>'
+  app/models/filter.rb:1:in `<top (required)>'
+  app/controllers/tasks_controller.rb:10:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:53:20 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered projects/_form.html.haml (56.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered tasks/_form.html.haml (25.9ms)
+  Rendered filter/_form.html.haml (1.0ms)
+  Rendered tasks/index.html.haml within layouts/application (97.3ms)
+Completed 500 Internal Server Error in 5292ms
+
+ActionView::Template::Error (undefined method `model_name' for Filter:Class):
+    1: = simple_form_for @filter, url: tasks_path do |f|
+    2:   .field= f.input :state, collection: Task.state_machine.states.map(&:name)
+    3:   .field= f.input :q
+    4:   .actions= f.submit  
+  app/views/filter/_form.html.haml:1:in `_app_views_filter__form_html_haml__2308356117730093412_70171276817600'
+  app/views/tasks/index.html.haml:61:in `_app_views_tasks_index_html_haml___3400279150450251623_70171415434840'
+  app/controllers/tasks_controller.rb:11:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:54:09 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (13.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (25.3ms)
+  Rendered filter/_form.html.haml (1.0ms)
+  Rendered tasks/index.html.haml within layouts/application (55.3ms)
+Completed 500 Internal Server Error in 3918ms
+
+ActionView::Template::Error (undefined method `model_name' for Filter:Class):
+    1: = simple_form_for @filter, url: tasks_path do |f|
+    2:   .field= f.input :state, collection: Task.state_machine.states.map(&:name)
+    3:   .field= f.input :q
+    4:   .actions= f.submit  
+  app/views/filter/_form.html.haml:1:in `_app_views_filter__form_html_haml__2308356117730093412_70171276817600'
+  app/views/tasks/index.html.haml:61:in `_app_views_tasks_index_html_haml___3400279150450251623_70171415434840'
+  app/controllers/tasks_controller.rb:11:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:54:29 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered projects/_form.html.haml (57.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered tasks/_form.html.haml (25.9ms)
+  Rendered filter/_form.html.haml (1.2ms)
+  Rendered tasks/index.html.haml within layouts/application (97.0ms)
+Completed 500 Internal Server Error in 3160ms
+
+ActionView::Template::Error (undefined method `param_key' for "Filter":String):
+    1: = simple_form_for @filter, url: tasks_path do |f|
+    2:   .field= f.input :state, collection: Task.state_machine.states.map(&:name)
+    3:   .field= f.input :q
+    4:   .actions= f.submit  
+  app/views/filter/_form.html.haml:1:in `_app_views_filter__form_html_haml__2308356117730093412_70171276817600'
+  app/views/tasks/index.html.haml:61:in `_app_views_tasks_index_html_haml___3400279150450251623_70171415434840'
+  app/controllers/tasks_controller.rb:11:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:55:08 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (13.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (25.0ms)
+  Rendered filter/_form.html.haml (1.7ms)
+  Rendered tasks/index.html.haml within layouts/application (54.2ms)
+Completed 500 Internal Server Error in 2980ms
+
+ActionView::Template::Error (undefined method `persisted?' for #<Filter:0x0000000518df80>):
+    1: = simple_form_for @filter, url: tasks_path do |f|
+    2:   .field= f.input :state, collection: Task.state_machine.states.map(&:name)
+    3:   .field= f.input :q
+    4:   .actions= f.submit  
+  app/views/filter/_form.html.haml:1:in `_app_views_filter__form_html_haml__2308356117730093412_70171276817600'
+  app/views/tasks/index.html.haml:61:in `_app_views_tasks_index_html_haml___3400279150450251623_70171415434840'
+  app/controllers/tasks_controller.rb:11:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:55:26 +0100
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered projects/_form.html.haml (15.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered tasks/_form.html.haml (66.0ms)
+  Rendered filter/_form.html.haml (8.1ms)
+  Rendered tasks/index.html.haml within layouts/application (104.1ms)
+Completed 500 Internal Server Error in 3081ms
+
+ActionView::Template::Error (undefined method `q' for #<Filter:0x007fa40c0b14d8>):
+    1: = simple_form_for @filter, url: tasks_path do |f|
+    2:   .field= f.input :state, collection: Task.state_machine.states.map(&:name)
+    3:   .field= f.input :q
+    4:   .actions= f.submit  
+    5: 
+    6: 
+  app/views/filter/_form.html.haml:3:in `block in _app_views_filter__form_html_haml__2308356117730093412_70171276817600'
+  app/views/filter/_form.html.haml:1:in `_app_views_filter__form_html_haml__2308356117730093412_70171276817600'
+  app/views/tasks/index.html.haml:61:in `_app_views_tasks_index_html_haml___3400279150450251623_70171415434840'
+  app/controllers/tasks_controller.rb:11:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:55:37 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (14.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (23.5ms)
+  Rendered filter/_form.html.haml (8.6ms)
+  Rendered tasks/index.html.haml within layouts/application (58.8ms)
+  Rendered layouts/_navigation.html.haml (1.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 4261ms (Views: 194.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (56ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-20 13:55:42 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2013-07-20 13:56:15 +0100
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HmVjA+itY8j/VJm63EmOFjR6VaKY6SExUymEF09QzCk=", "filter"=>{"state"=>"paused", "q"=>"jhgiutyu"}, "commit"=>"Create Filter"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 400 Bad Request in 142ms (Views: 133.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-07-20 13:58:30 +0100
+Processing by TasksController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (0.4ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (15.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (31.5ms)
+  Rendered filter/_form.html.haml (15.3ms)
+  Rendered tasks/index.html.haml within layouts/application (78.7ms)
+  Rendered layouts/_navigation.html.haml (1.8ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 3005ms (Views: 216.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-20 13:58:33 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks?utf8=%E2%9C%93&filter%5Bstate%5D=paused&filter%5Bq%5D=asdfasd&commit=Create+Filter" for 127.0.0.1 at 2013-07-20 13:58:43 +0100
+Processing by TasksController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"state"=>"paused", "q"=>"asdfasd"}, "commit"=>"Create Filter"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mTask Load (0.8ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`user_id` = 1 AND `nodes`.`state` = 'paused'
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Task') AND `nodes`.`user_id` = 1 AND `nodes`.`task_name` = 'asdfasd'[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered projects/_form.html.haml (16.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered tasks/_form.html.haml (31.0ms)
+  Rendered filter/_form.html.haml (11.3ms)
+  Rendered tasks/index.html.haml within layouts/application (76.5ms)
+  Rendered layouts/_navigation.html.haml (1.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 109457ms (Views: 202.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (77ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-20 14:00:32 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/tasks?utf8=%E2%9C%93&filter%5Bstate%5D=paused&filter%5Bq%5D=asdfasd&commit=Create+Filter" for 127.0.0.1 at 2013-07-20 14:01:57 +0100
+Processing by TasksController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"state"=>"paused", "q"=>"asdfasd"}, "commit"=>"Create Filter"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+Completed 500 Internal Server Error in 3773ms
+
+NoMethodError (undefined method `Filter' for #<TasksController:0x007fa41c02c890>):
+  app/controllers/tasks_controller.rb:10:in `index'
+
+
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+  Rendered /home/aythami/.rvm/gems/ruby-1.9.3-p194@prototype/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/tasks?utf8=%E2%9C%93&filter%5Bstate%5D=paused&filter%5Bq%5D=asdfasd&commit=Create+Filter" for 127.0.0.1 at 2013-07-20 14:02:22 +0100
+Processing by TasksController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"state"=>"paused", "q"=>"asdfasd"}, "commit"=>"Create Filter"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.3ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (61.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (31.4ms)
+  Rendered filter/_form.html.haml (11.1ms)
+  Rendered tasks/index.html.haml within layouts/application (120.2ms)
+  Rendered layouts/_navigation.html.haml (1.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 2987ms (Views: 225.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:26 +0100
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/tasks?utf8=%E2%9C%93&filter%5Bstate%5D=expired&filter%5Bq%5D=asdfasdfdsfsdfdsf&commit=Create+Filter" for 127.0.0.1 at 2013-07-20 14:02:33 +0100
+Processing by TasksController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"state"=>"expired", "q"=>"asdfasdfdsfsdfdsf"}, "commit"=>"Create Filter"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered projects/_form.html.haml (14.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered tasks/_form.html.haml (32.5ms)
+  Rendered filter/_form.html.haml (13.5ms)
+  Rendered tasks/index.html.haml within layouts/application (73.3ms)
+  Rendered layouts/_navigation.html.haml (1.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 2760ms (Views: 318.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-20 14:02:36 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/tasks?utf8=%E2%9C%93&filter%5Bstate%5D=to_do&filter%5Bq%5D=hbkh&commit=Create+Filter" for 127.0.0.1 at 2013-07-20 14:02:54 +0100
+Processing by TasksController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"state"=>"to_do", "q"=>"hbkh"}, "commit"=>"Create Filter"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered projects/_form.html.haml (15.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered tasks/_form.html.haml (31.1ms)
+  Rendered filter/_form.html.haml (8.8ms)
+  Rendered tasks/index.html.haml within layouts/application (66.8ms)
+  Rendered layouts/_navigation.html.haml (1.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 5421ms (Views: 189.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:59 +0100
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:59 +0100
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:59 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-07-20 14:02:59 +0100
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overriders.css?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap_and_overriders.css - 304 Not Modified (85ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-collapse.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-dropdown.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-07-20 14:03:00 +0100
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/tasks?utf8=%E2%9C%93&filter%5Bstate%5D=to_do&filter%5Bq%5D=hbkh&commit=Create+Filter" for 127.0.0.1 at 2013-07-20 14:03:21 +0100
+Processing by TasksController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"state"=>"to_do", "q"=>"hbkh"}, "commit"=>"Create Filter"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNode Load (1.6ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE `nodes`.`user_id` = 1
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE `nodes`.`type` IN ('Project') AND `nodes`.`user_id` = 1[0m
+  [1m[35mNode Load (0.4ms)[0m  SELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`
+  Rendered projects/_form.html.haml (14.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `nodes`.* FROM `nodes` WHERE (`nodes`.`lft` >= 1) AND (`nodes`.`lft` < 4) ORDER BY `lft`[0m
+  Rendered tasks/_form.html.haml (80.7ms)
+  Rendered filter/_form.html.haml (10.4ms)
+  Rendered tasks/index.html.haml within layouts/application (121.9ms)
+  Rendered layouts/_navigation.html.haml (1.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 402244ms (Views: 216.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-20 14:10:03 +0100
+Served asset /application.css - 304 Not Modified (81ms)
