@@ -2,7 +2,6 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    debugger
     @interruption = Interruption.new 
     @nodes = current_user.nodes.all
     @task = Task.new
