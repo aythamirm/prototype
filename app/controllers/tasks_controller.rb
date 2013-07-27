@@ -8,6 +8,7 @@ class TasksController < ApplicationController
     @filter = params[:filter].present? ? Filter.new(params[:filter]) : Filter.new
     
     if params[:filter].present?
+      # prueba
       if params[:filter][:search] != ""
         @nodes = current_user.tasks.where(task_name: params[:filter][:search])  
       end
