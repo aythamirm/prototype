@@ -56,6 +56,8 @@
 - #link_to 'New Task', new_task_path 
 = link_to('New Task', '#NewtaskModal', data: { toggle: 'modal' } )
 .sidebar(style="display:inline")
+%ol.sortable_tree{ data: { max_levels: 5, rebuild_url: rebuild_nodes_url } }
+  = sortable_tree @nodes
   = render 'projects/form' 
   = render 'form'
   = render 'filter/form'

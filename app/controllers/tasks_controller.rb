@@ -1,12 +1,18 @@
 class TasksController < ApplicationController
-  # GET /tasks
-  # GET /tasks.json
+  include TheSortableTreeController::Rebuild
   def index
     @interruption = Interruption.new 
     @nodes = current_user.nodes.all
     @task = Task.new
     @project = Project.new
     @filter = params[:filter].present? ? Filter.new(params[:filter]) : Filter.new
+    
+    if params[:filter].present?
+      if params[:filter][:search] != ""
+        @nodes = current_user.tasks.where(task_name: params[:filter][:search])  
+      end
+    end   
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @nodes }

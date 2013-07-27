@@ -18,6 +18,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   gem 'jquery-rails'
+  gem 'jquery-ui-rails'
   gem 'therubyracer'
   gem 'execjs'
 end
@@ -37,6 +38,7 @@ gem 'simple_form'
 #gem 'sqlite3'
 gem 'state_machine'
 gem 'strong_parameters'
+gem "the_sortable_tree", "~> 2.3.0"
 
 
 

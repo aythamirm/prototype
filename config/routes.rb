@@ -36,7 +36,15 @@
   #       get 'sold'
   #     end
   #   end
+   
+   resources :nodes do
+    collection do
+      get :manage
 
+      # required for Sortable GUI server side actions
+      post :rebuild
+    end
+   end 
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

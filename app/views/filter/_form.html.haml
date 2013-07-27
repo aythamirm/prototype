@@ -1,14 +1,8 @@
-=begin
-  = simple_form_for @filter, url: tasks_path, method: 'get' do |f|
-    .field= f.input :state, collection: Task.state_machine.states.map(&:name), required: false
-    .field= f.input :search, required: false
-    .actions= f.submit
-=end      
-
-= simple_form_for (@filter, {:controllers=>"filters", actions =>"Post" }, method: 'post') do |f|
+= simple_form_for @filter, url: tasks_path, method: 'get' do |f|
   .field= f.input :state, collection: Task.state_machine.states.map(&:name), required: false
   .field= f.input :search, required: false
-  .actions= f.submit  
+  .actions= f.submit
+
 
     
 
