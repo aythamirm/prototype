@@ -11,10 +11,19 @@ class TasksController < ApplicationController
       if params[:filter][:search] != ""
         @nodes = current_user.tasks.where(task_name: params[:filter][:search])  
       end
-      # estoy trabajando aquí
-      if params[:state][:paused].paused
-        @nodes = current_user.tasks.where(state: params[:filter][:paused])
+
+      if params[:state][:initial]
+        @nodes = current_user.tasks.where(state: params[:filter][:initial])
       end  
+
+      if params[:state][:pause]
+        @nodes = current_user.tasks.where(state: params[:filter][:pause])
+      end  
+
+      if params[:state][:finish]
+        @nodes = current_user.tasks.where(state: params[:filter][:finish])
+      end  
+      
     end   
 
     respond_to do |format|
