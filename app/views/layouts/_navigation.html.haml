@@ -1,16 +1,25 @@
-= link_to "prototype", root_path, :class => 'brand'
-%ul.nav
-  - if user_signed_in?
+= link_to "GTD Task Manager", root_path, :class => 'brand brand-bootbus'
+.nav-collapse.collapse
+  %ul.nav.pull-right
     %li
-      = link_to('Logout', destroy_user_session_path, :method=>'delete')
-  - else
+      %a{:href=>"/blog.html"}Blog
     %li
-      = link_to('Login', '#loginModal', data: { toggle: 'modal' } )
-  - if user_signed_in?
+      %a{:href=>"/Tour.html"}Tour
     %li
-      = link_to('Edit account', edit_user_registration_path)
-  - else
+      %a{:href=>"/contact_us.html"}Contact us
     %li
-      = link_to('Sign up', '#SignupModal', data: { toggle: 'modal' })
-    %li{
-      %a{href=>"blog.html"}blog
+      %a{:href=>"/faq.html"}FAQ   
+    - if user_signed_in?
+      %li
+        = link_to('Logout', destroy_user_session_path, :method=>'delete')
+    - else
+      %li
+        = link_to('Login', '#loginModal', data: { toggle: 'modal' } )
+    - if user_signed_in?
+      %li
+        = link_to('Edit account', edit_user_registration_path)
+    - else
+      %li
+        = link_to('Sign up', '#SignupModal', data: { toggle: 'modal' })
+   
+        
