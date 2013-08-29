@@ -1,9 +1,8 @@
  Prototype::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :sessions => "users/sessions" }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  
   resources :projects
   resources :tasks do
     get '/start_task' => "tasks#start", :as => :start_task
