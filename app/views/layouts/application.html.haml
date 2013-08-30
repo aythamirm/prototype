@@ -21,10 +21,7 @@
           .row
             .span12
               = render 'layouts/messages'
-              = render 'layouts/info-body'
               = yield
         %footer
-          = render 'layouts/info-footer'
-          = yield
   = javascript_include_tag 'application'
   = include_gon        
