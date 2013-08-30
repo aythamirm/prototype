@@ -2,13 +2,13 @@
 .nav-collapse.collapse
   %ul.nav.pull-right
     %li
-      %a{:href=>"/blog.html"}Blog
-    %li
       %a{:href=>"/Tour.html"}Tour
     %li
-      %a{:href=>"/contact_us.html"}Contact us
+      %a{:href=>"/blog.html"}Blog
     %li
-      %a{:href=>"/faq.html"}FAQ   
+      %a{:href=>"/faq.html"}FAQ 
+    %li
+      %a{:href=>"/contact_us.html"}Contact us  
     - if user_signed_in?
       %li
         = link_to('Logout', destroy_user_session_path, :method=>'delete')
