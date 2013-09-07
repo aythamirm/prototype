@@ -1,4 +1,11 @@
 /* Start : Override css internal page */
+.modal{
+    background: linear-gradient(to bottom, #45484D 0%, #000000 100%) repeat scroll 0 0 transparent;
+    border-color: #555555;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
+    padding: 5px 15px;
+}
 .alert adjusted alert-info{
  
 	background: -moz-linear-gradient(center top , #D6E6FA 0px, #C8DBF5 100%) repeat scroll 0 0 transparent;
@@ -59,6 +66,7 @@
 	color: white;
   font-weight: bold;
 }
+
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
 	border-top-color: white;
 	border-bottom-color: white;
