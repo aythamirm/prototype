@@ -307,7 +307,7 @@ footer {
   line-height: 30px;
 }
 .quick-links > li > a {
-  color: white;
+  color: black;
 }
 .social-icons-row {
   margin-top: 50px;
@@ -325,6 +325,10 @@ footer {
 .phone-number {
   margin-left: 25px;
 }
+.icon-inbox {
+  display:inline;
+}
+            
 .footer-divider {
   border-top: 0;  
   border-bottom: 1px solid #333;

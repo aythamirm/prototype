@@ -11,10 +11,27 @@
             %br
             %span
               = link_to('Edit account', edit_user_registration_path)
-              
+   
         .divider
         .thumbnail
-          %h3 PANEL
+          %h3 Control panel
+          %ul.nav.nav-pill.nav-stacked
+            %li.active
+              %a{:href=>"#"} 
+                %i.icon-inbox  INBOX
+            %li.active
+              %a{:href=>"#"} 
+                %i.icon-inbox  NEXT    
+            %li.active
+              %a{:href=>"#"} 
+                %i.icon-inbox  PROJECT
+            %li.active
+              %a{:href=>"#"} 
+                %i.icon-inbox  WAITING
+            %li.active
+              %a{:href=>"#"} 
+                %i.icon-inbox  SOMEDAY           
+          %h3 search panel
           = render 'filter/form'
     %li.span9.pull-right.sidebar
       %h1.page-header Work Desk
