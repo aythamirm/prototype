@@ -20,7 +20,7 @@
 	width: 100%;
  }
  .page-content{
-    background: url("../img/b-sidebar-back.png") repeat scroll 0 0 transparent;
+    background: #467;
     border: 1px solid #4E4E4E;
     font-size: 12px;
     line-height: normal;
@@ -50,7 +50,7 @@
 .navbar-inner, footer {
   border: none;
   padding: 15px 0;
- background: url("../img/b-sidebar-back.png") repeat scroll 0 0 transparent;
+  background: #467;
 }
 .navbar .brand-bootbus {
 	font-size: 30px;
