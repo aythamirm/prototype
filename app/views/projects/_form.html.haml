@@ -1,14 +1,19 @@
-= simple_form_for(@project) do |f| 
-  - if @project.errors.any? 
-    #error_explanation
-      %h2
-        = pluralize(@project.errors.count, "error")  
-        prohibited this project from being saved:
+.modal.hide.fade#NewprojectModal
+  .modal-header
+    %button.close(data-dismiss="modal" aria-hidden="true") &times
+  .modal-body
+    = simple_form_for(@project) do |f| 
+      - if @project.errors.any? 
+        #error_explanation
+          %h2
+            = pluralize(@project.errors.count, "error")  
+            prohibited this project from being saved:
 
-      %ul
-      -@project.errors.full_messages.each do |msg| 
-        %li = msg  
-  
-  .field= f.input :project_title 
-  .field= f.select :parent_id, nested_set_options(current_user.projects, nil, method: :type, value: 'Task') {|i| "#{'-' * i.level} #{i.project_title}"  if i.type == 'Project' } 
-  .actions= f.submit 
+          %ul
+          -@project.errors.full_messages.each do |msg| 
+            %li = msg  
+      
+      .field= f.input :project_title 
+      .field= f.select :parent_id, nested_set_options(current_user.projects, nil, method: :type, value: 'Task') {|i| "#{'-' * i.level} #{i.project_title}"  if i.type == 'Project' } 
+      .modal-footer  
+        .actions= f.submit      

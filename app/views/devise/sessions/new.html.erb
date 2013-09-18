@@ -46,3 +46,17 @@
 
   <%= render "devise/shared/links" %>
 </div>
+
+<div class="content">
+  <div class="row">
+    <div class="span12">
+              <%= render "layouts/messages" %>
+              <%= render "layouts/info-body" %>
+              <%= yield %>
+    </div>
+  </div>
+  <footer>          
+    <%= render "layouts/info-footer" %>
+    <%= yield %>
+  </footer>  
+</div>
