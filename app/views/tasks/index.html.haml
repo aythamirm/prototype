@@ -6,7 +6,7 @@
         .my-profile
           %img{:src => "/assets/pefil.jpg", :height => "36", :width => "36"} 
           .first-child
-            Welcome Victoria!
+            ="Welcome #{current_user.email}"
             %br
             %span
               = link_to('Edit account', edit_user_registration_path)

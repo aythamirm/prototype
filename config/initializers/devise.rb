@@ -84,7 +84,7 @@ Devise.setup do |config|
   # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use
   # a value less than 10 in other environments.
   config.stretches = Rails.env.test? ? 1 : 10
-
+  config.secret_key = '918a48e2fe15dff21057430d13cb9250fd4bd8f74c473a4345e04895e574727f03d6d4b998e3a837899427f4e44c1d808764351ab998f4239230dadc4505d84a'
   # Setup a pepper to generate the encrypted password.
   # config.pepper = "ef65433e7661a8434cd4ddd22fc7f2e7abda6a43156398282f5d5f2e819f94484fd397f09ffcc9ce27f1ceba436a31c65a1c4277d7b524f37a3d6eae08643fb7"
 

@@ -28,8 +28,9 @@ group :development do
 end
 
 gem 'awesome_nested_set', github:'xxswingxx/awesome_nested_set'
+gem 'activeadmin', github:'gregbell/active_admin'
 gem 'bootstrap-sass'
-gem 'devise' 
+gem 'devise','>= 3.0' 
 gem 'gon'
 gem 'haml' 
 gem  'mysql2'
