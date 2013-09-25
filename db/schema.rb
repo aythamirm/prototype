@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130627162818) do
+ActiveRecord::Schema.define(:version => 20130627162846) do
 
   create_table "interruptions", :force => true do |t|
     t.datetime "start_time"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20130627162818) do
     t.string   "state"
     t.float    "duration"
     t.float    "estimated_time"
+    t.string   "action"
   end
 
   add_index "nodes", ["user_id"], :name => "index_nodes_on_user_id"

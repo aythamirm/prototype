@@ -20,6 +20,7 @@
       .field= f.input :priority 
       
       .field= f.input :note 
+      .field= f.input :action, priority: [ "inbox" ], collection: [ "inbox", "Next", "Proyect", "Waiting", "Someday"], :include_blank => false
       
       %div= f.select :parent_id, nested_set_options(current_user.projects, nil, method: :type, value: 'Task') {|i| "#{'-' * i.level} #{i.project_title}"  if i.type == 'Project' } 
       .modal-footer  
