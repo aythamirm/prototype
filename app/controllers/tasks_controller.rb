@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   include TheSortableTreeController::Rebuild
   def index
     @interruption = Interruption.new 
-    @nodes = current_user.nodes.all
+    @nodes = current_user.nodes
     @task = Task.new
     @project = Project.new
     @filter = params[:filter].present? ? Filter.new(params[:filter]) : Filter.new
@@ -23,6 +23,7 @@ class TasksController < ApplicationController
         @nodes = current_user.tasks.where(state: params[:filter][:state])
       end  
     end   
+    by_gtd_state
     
 
     respond_to do |format|
@@ -57,6 +58,7 @@ class TasksController < ApplicationController
   def edit
     @task = Task.find(params[:id])
   end
+
 
   # POST /tasks
   # POST /tasks.json
@@ -109,9 +111,17 @@ class TasksController < ApplicationController
     render json: true
   end 
 
+  def by_gtd_state
+    @nodes = @nodes.where(action: params[:key].capitalize) if params[:key]
+  end
+   
+  def Change_state
+  # código aquí
+  end 
+
   private
 
   def task_params
-    params.require(:task).permit(:task_name,:estimated_time, :due_date, :note, :priority, :parent_id)
+    params.require(:task).permit(:task_name,:estimated_time, :due_date, :note, :priority, :parent_id, :action)
   end   
 end

@@ -47,7 +47,7 @@ $('.content').on 'click', '.start', ()->
   $.ajax
     url: startUrl
     type: 'GET'
-    dataype:'json'
+    dataType:'json'
     success:()->
       thisClicked2.removeClass('start').addClass('pause')
       thisClicked2.html('Pause')
@@ -62,7 +62,7 @@ $('.content').on 'click', '.finish', ()->
   $.ajax
     url: finishUrl
     type: 'GET'
-    dataype:'json'
+    dataType:'json'
     success:()->
       thisClicked3.hide()
       thisClicked3.parent().find('.pause').hide()
@@ -72,3 +72,16 @@ $('.content').on 'click', '.finish', ()->
 
 $('.link-show-description').bind 'click', () ->
   $(this).parent().find('.hidden-description').show()
+
+$('.content').on 'click', '.state', ()->
+  thisClicked4 = $(this)
+  taskID = $(this).parent().data('task-id')
+  stateUrl = "/tasks/#{taskID}/state_task"
+  $.ajax
+    url: stateUrl
+    type: 'POST'
+    dataType:'json'
+    success:()->
+      alert(":-)")  
+    error:()->  
+      alert(":-(")  

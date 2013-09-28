@@ -14,7 +14,14 @@ $("document").ready(function() {
 	$('.carousel').carousel({
       interval: 4000
    });
+	$('#myTab a[href="#inbox"]').tab('show')
+	$('#myTab a[href="#calendar"]').tab('show')
+	$('#myTab a[href="#diary"]').tab('show')	
+	$('#myTab a[href="#statistics"]').tab('show')	
+	$('#myTab a[href="#notification"]').tab('show')
+	$('#myTab a[href="#social"]').tab('show')				
 	/*End: Automatically start the slider */
+
 
 })
 
