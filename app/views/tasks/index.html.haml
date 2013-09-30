@@ -55,21 +55,21 @@
           %a{:href=>"#social", :"data-toogle"=>"tab"} SOCIAL    
       .thumbnail
         .tab-content.myTabContent
-          .tab-panel.fade.active.in.inbox          
+          .tab-pane.fade.active.in.inbox          
             .sidebar(style="display:inline")
               %ol.sortable_tree{ data: { max_levels: 5, rebuild_url: rebuild_nodes_url } }
                 = sortable_tree @nodes
                 = render 'projects/form' 
                 = render 'form'    
-          .tab-panel.fade.calendar
+          .tab-pane.fade.calendar
             esto aquí es el calendario.
-          .tab-panel.fade.diary  
+          .tab-pane.fade.diary  
             esto aquí es el DIARIO.
-          .tab-panel.fade.statistics  
+          .tab-pane.fade.statistics  
             esto aquí es el statistics. 
-          .tab-panel.fade.notification  
+          .tab-pane.fade.notification  
             esto aquí es el notification. 
-          .tab-panel.fade.social  
+          .tab-pane.fade.social  
             esto aquí es el social.               
 
 

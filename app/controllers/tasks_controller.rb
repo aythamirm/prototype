@@ -115,7 +115,7 @@ class TasksController < ApplicationController
     @nodes = @nodes.where(action: params[:key].capitalize) if params[:key]
   end
    
-  def Change_state
+  def state
   # código aquí
   end 
 
