@@ -33,6 +33,8 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
+        <%= f.input :first_name, :required => true, :autofocus => true %>
+        <%= f.input :last_name, :required => true%>
         <%= f.input :email, :required => true, :autofocus => true %>
         <%= f.input :password, :required => true %>
         <%= f.input :password_confirmation, :required => true %>
@@ -47,16 +49,3 @@
   <%= render "devise/shared/links" %>
 </div>
 
-<div class="content">
-  <div class="row">
-    <div class="span12">
-              <%= render "layouts/messages" %>
-              <%= render "layouts/info-body" %>
-              <%= yield %>
-    </div>
-  </div>
-  <footer>          
-    <%= render "layouts/info-footer" %>
-    <%= yield %>
-  </footer>  
-</div>

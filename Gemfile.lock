@@ -89,6 +89,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
+    event-calendar (2.3.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
     formtastic (2.3.0.rc2)
@@ -208,6 +209,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
   devise (>= 3.0)
+  event-calendar
   execjs
   gon
   haml

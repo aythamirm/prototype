@@ -31,7 +31,7 @@
           %div.form-inputs
             = f.input :first_name, :required => true, :autofocus => true 
             = f.input :last_name, :required => true
-            = f.input :avatar, :required => true 
+            = f.input :avatar, :required => true ,as: :file 
             = f.input :email, :required => true
             - if devise_mapping.confirmable? && resource.pending_reconfirmation? 
               %p Currently waiting confirmation for: 
