@@ -1,0 +1,70 @@
+        new_admin_user_session GET        /admin/login(.:format)                           active_admin/devise/sessions#new
+            admin_user_session POST       /admin/login(.:format)                           active_admin/devise/sessions#create
+    destroy_admin_user_session DELETE|GET /admin/logout(.:format)                          active_admin/devise/sessions#destroy
+           admin_user_password POST       /admin/password(.:format)                        active_admin/devise/passwords#create
+       new_admin_user_password GET        /admin/password/new(.:format)                    active_admin/devise/passwords#new
+      edit_admin_user_password GET        /admin/password/edit(.:format)                   active_admin/devise/passwords#edit
+                               PUT        /admin/password(.:format)                        active_admin/devise/passwords#update
+                          root            /                                                tasks#index
+                    admin_root            /admin(.:format)                                 admin/dashboard#index
+batch_action_admin_admin_users POST       /admin/admin_users/batch_action(.:format)        admin/admin_users#batch_action
+             admin_admin_users GET        /admin/admin_users(.:format)                     admin/admin_users#index
+                               POST       /admin/admin_users(.:format)                     admin/admin_users#create
+          new_admin_admin_user GET        /admin/admin_users/new(.:format)                 admin/admin_users#new
+         edit_admin_admin_user GET        /admin/admin_users/:id/edit(.:format)            admin/admin_users#edit
+              admin_admin_user GET        /admin/admin_users/:id(.:format)                 admin/admin_users#show
+                               PUT        /admin/admin_users/:id(.:format)                 admin/admin_users#update
+                               DELETE     /admin/admin_users/:id(.:format)                 admin/admin_users#destroy
+               admin_dashboard GET        /admin/dashboard(.:format)                       admin/dashboard#index
+   batch_action_admin_comments POST       /admin/comments/batch_action(.:format)           admin/comments#batch_action
+                admin_comments GET        /admin/comments(.:format)                        admin/comments#index
+                               POST       /admin/comments(.:format)                        admin/comments#create
+                 admin_comment GET        /admin/comments/:id(.:format)                    admin/comments#show
+              new_user_session GET        /users/sign_in(.:format)                         users/sessions#new
+                  user_session POST       /users/sign_in(.:format)                         users/sessions#create
+          destroy_user_session DELETE     /users/sign_out(.:format)                        users/sessions#destroy
+                 user_password POST       /users/password(.:format)                        devise/passwords#create
+             new_user_password GET        /users/password/new(.:format)                    devise/passwords#new
+            edit_user_password GET        /users/password/edit(.:format)                   devise/passwords#edit
+                               PUT        /users/password(.:format)                        devise/passwords#update
+      cancel_user_registration GET        /users/cancel(.:format)                          devise/registrations#cancel
+             user_registration POST       /users(.:format)                                 devise/registrations#create
+         new_user_registration GET        /users/sign_up(.:format)                         devise/registrations#new
+        edit_user_registration GET        /users/edit(.:format)                            devise/registrations#edit
+                               PUT        /users(.:format)                                 devise/registrations#update
+                               DELETE     /users(.:format)                                 devise/registrations#destroy
+                      projects GET        /projects(.:format)                              projects#index
+                               POST       /projects(.:format)                              projects#create
+                   new_project GET        /projects/new(.:format)                          projects#new
+                  edit_project GET        /projects/:id/edit(.:format)                     projects#edit
+                       project GET        /projects/:id(.:format)                          projects#show
+                               PUT        /projects/:id(.:format)                          projects#update
+                               DELETE     /projects/:id(.:format)                          projects#destroy
+               task_start_task GET        /tasks/:task_id/start_task(.:format)             tasks#start
+              task_finish_task GET        /tasks/:task_id/finish_task(.:format)            tasks#finish
+              task_action_task GET        /tasks/:task_id/action_task(.:format)            tasks#action
+            task_interruptions GET        /tasks/:task_id/interruptions(.:format)          interruptions#index
+                               POST       /tasks/:task_id/interruptions(.:format)          interruptions#create
+         new_task_interruption GET        /tasks/:task_id/interruptions/new(.:format)      interruptions#new
+        edit_task_interruption GET        /tasks/:task_id/interruptions/:id/edit(.:format) interruptions#edit
+             task_interruption GET        /tasks/:task_id/interruptions/:id(.:format)      interruptions#show
+                               PUT        /tasks/:task_id/interruptions/:id(.:format)      interruptions#update
+                               DELETE     /tasks/:task_id/interruptions/:id(.:format)      interruptions#destroy
+      task_create_interruption POST       /tasks/:task_id/interruptions(.:format)          interruptions#create
+        task_stop_interruption GET        /tasks/:task_id/interruptions_stop(.:format)     interruptions#stop_interruption
+                         tasks GET        /tasks(.:format)                                 tasks#index
+                               POST       /tasks(.:format)                                 tasks#create
+                      new_task GET        /tasks/new(.:format)                             tasks#new
+                     edit_task GET        /tasks/:id/edit(.:format)                        tasks#edit
+                          task GET        /tasks/:id(.:format)                             tasks#show
+                               PUT        /tasks/:id(.:format)                             tasks#update
+                               DELETE     /tasks/:id(.:format)                             tasks#destroy
+                  manage_nodes GET        /nodes/manage(.:format)                          nodes#manage
+                 rebuild_nodes POST       /nodes/rebuild(.:format)                         nodes#rebuild
+                         nodes GET        /nodes(.:format)                                 nodes#index
+                               POST       /nodes(.:format)                                 nodes#create
+                      new_node GET        /nodes/new(.:format)                             nodes#new
+                     edit_node GET        /nodes/:id/edit(.:format)                        nodes#edit
+                          node GET        /nodes/:id(.:format)                             nodes#show
+                               PUT        /nodes/:id(.:format)                             nodes#update
+                               DELETE     /nodes/:id(.:format)                             nodes#destroy
