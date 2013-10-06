@@ -3,7 +3,7 @@
   root :to => 'tasks#index'
   ActiveAdmin.routes(self)
   
-  devise_for :users, :controllers => { :sessions => "users/sessions" }
+  devise_for :users, :controllers => { :sessions => "users/sessions", registrations: "users/registrations" }
   
 
   # The priority is based upon order of creation:
