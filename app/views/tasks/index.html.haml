@@ -74,7 +74,9 @@
                 = render 'projects/form' 
                 = render 'form'    
           .tab-pane.fade#calendar
-            esto aquí es el calendario.
+            = link_to('New Event', '#NewtaskModal', data: { toggle: 'modal' } )
+            = calendar @nodes, {:prev_text=>"prev", :next_text=>"next",:start_day => :monday} do |event| 
+              %div= link_to event.title, event 
           .tab-pane.fade#diary  
             esto aquí es el DIARIO.
           .tab-pane.fade#statistics  

@@ -37,6 +37,7 @@ gem 'gon'
 gem 'haml' 
 gem  'mysql2'
 gem 'rails', '3.2.13'
+gem "simple_calendar", "~> 0.1.9"
 gem 'simple_form'
 #gem 'sqlite3'
 gem 'state_machine'
