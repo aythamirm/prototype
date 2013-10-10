@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(:version => 201306251705148) do
     t.float    "duration"
     t.float    "estimated_time"
     t.string   "action"
-    t.datetime "start_time"
+    t.date     "start_time"
   end
 
   add_index "nodes", ["user_id"], :name => "index_nodes_on_user_id"

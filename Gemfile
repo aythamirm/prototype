@@ -32,17 +32,16 @@ gem 'activeadmin', github:'gregbell/active_admin'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'devise','>= 3.0' 
-gem 'event-calendar', :require => 'event_calendar'
 gem 'gon'
 gem 'haml' 
 gem  'mysql2'
 gem 'rails', '3.2.13'
-gem "simple_calendar", "~> 0.1.9"
 gem 'simple_form'
 #gem 'sqlite3'
 gem 'state_machine'
 gem 'strong_parameters'
 gem "the_sortable_tree", "~> 2.3.0"
+gem "watu_table_builder", :require => "table_builder"
 
 
 

@@ -75,8 +75,18 @@
                 = render 'form'    
           .tab-pane.fade#calendar
             = link_to('New Event', '#NewtaskModal', data: { toggle: 'modal' } )
-            = calendar @nodes, {:prev_text=>"prev", :next_text=>"next",:start_day => :monday} do |event| 
-              %div= link_to event.title, event 
+            .calendar
+              %h2#month
+                = link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") 
+                = h @date.strftime("%B %Y") 
+                = link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") 
+              = calendar_for @nodes, :year => @date.year, :month => @date.month do |calendar| 
+                = calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
+                = calendar.day(:day_method => :start_time )  do |date, nodes| 
+                  = date.day
+                  %ul
+                    - for node in nodes 
+                      %li= link_to h(node.task_name), node 
           .tab-pane.fade#diary  
             esto aquí es el DIARIO.
           .tab-pane.fade#statistics  
