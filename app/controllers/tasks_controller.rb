@@ -6,6 +6,7 @@ class TasksController < ApplicationController
     @task = Task.new
     @project = Project.new
     @filter = params[:filter].present? ? Filter.new(params[:filter]) : Filter.new
+    @calendar_nodes = current_user.tasks.where('start_time is not NULL')
     @date = params[:month] ? Date.parse(params[:month]) : Date.today
     
     if params[:filter].present?
