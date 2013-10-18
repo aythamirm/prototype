@@ -13,9 +13,6 @@
         .divider
         %h3 Control panel
         %ul.nav.nav-pill.nav-stacked
-          %li
-            %i.icon-inbox= link_to('All',tasks_path)
-            .badge.pull-right= current_user.nodes.count
           %li.active
             %i.icon-inbox= link_to('INBOX',"#{tasks_path}?key=inbox")
             .badge.pull-right= current_user.nodes.where(action: 'Inbox').count
@@ -30,19 +27,17 @@
             .badge.pull-right= current_user.nodes.where(action: 'Waiting').count  
           %li
             %i.icon-inbox= link_to('Someday',"#{tasks_path}?key=someday")
-            .badge.pull-right= current_user.nodes.where(action: 'Someday').count           
-        %h3 Search panel
-        = render 'filter/form'
-        %h3 Cleanup
-        %ul.nav.nav-pill.nav-stacked
+            .badge.pull-right= current_user.nodes.where(action: 'Someday').count 
+          %li.divider
+          %h3 Cleanup
           %li
-            %i.icon-book
-              %a{:href=>"#calendar"} Logbook
-            .badge.pull-right 23
-          %li.active
+            %i.icon-book= link_to('Logbook',tasks_path)
+            .badge.pull-right= current_user.nodes.count
+          %li
             %i.icon-trash
-              %a{:href=>"#calendar"} Trash
-            .badge.pull-right 23    
+              %a{:href=>"#calendar"} Trash               
+        %h3 Search panel
+        = render 'filter/form' 
     %li.span9.pull-right.sidebar
       %h1.page-header Work Desk
       .class.alert.adjusted.alert-info
@@ -57,12 +52,10 @@
           %a{:href=>"#calendar", :"data-toogle"=>"tab"}
             %i.icon-calendar CALENDAR 
         %li
-          %a{:href=>"#diary", :"data-toogle"=>"tab"} 
-            %i.icon-file DYARY 
-        %li
           %a{:href=>"#statistics", :"data-toogle"=>"tab"} STATISTICS
         %li
-          %a{:href=>"#notification", :"data-toogle"=>"tab"} NOTIFICATION  
+          %a{:href=>"#notification", :"data-toogle"=>"tab"} 
+            %i.icon-file NOTIFICATION  
         %li
           %a{:href=>"#social", :"data-toogle"=>"tab"} SOCIAL    
       .thumbnail
@@ -79,7 +72,7 @@
               %h2#month
                 = link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m") 
                 = h @date.strftime("%B %Y") 
-                = link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") 
+                = link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m")  
               = calendar_for @calendar_nodes, :year => @date.year, :month => @date.month do |calendar| 
                 = calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
                 = calendar.day(:day_method => :start_time )  do |date, nodes| 
@@ -88,8 +81,6 @@
                     - for node in nodes 
                       %li= link_to h(node.task_name), node 
                       
-          .tab-pane.fade#diary  
-            esto aquí es el DIARIO.
           .tab-pane.fade#statistics  
             esto aquí es el statistics. 
           .tab-pane.fade#notification  

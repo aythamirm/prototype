@@ -13,6 +13,7 @@
     get '/start_task' => "tasks#start", :as => :start_task
     get '/finish_task' => "tasks#finish", :as => :finish_task
     post '/state_task' => "tasks#state", :as => :state_task
+    
 
     resources :interruptions
     post '/interruptions' => "interruptions#create", :as => :create_interruption

@@ -69,7 +69,6 @@ $('.content').on 'click', '.finish', ()->
       alert("task finished")
     error:()->  
       alert(":-(")
-
 $('.link-show-description').bind 'click', () ->
   $(this).parent().find('.hidden-description').show()
 

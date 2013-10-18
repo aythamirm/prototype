@@ -120,7 +120,6 @@ class TasksController < ApplicationController
   def state
   # código aquí
   end 
-
   private
 
   def task_params

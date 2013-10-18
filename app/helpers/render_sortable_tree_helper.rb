@@ -15,7 +15,7 @@ module RenderSortableTreeHelper
         @h, @options = h, options
 
         node = options[:node]
-
+          
         "
           <li id='#{ node.id }_#{options[:klass]}' class='hyde'>
             <div class='item'>
@@ -40,7 +40,7 @@ module RenderSortableTreeHelper
 
       def hide_root
         if options[:title] == '/' 
-
+          hyde = "display:none"
         end
       end 
       def controls
@@ -48,31 +48,12 @@ module RenderSortableTreeHelper
 
         edit_path = h.url_for(:controller => options[:klass].pluralize, :action => :edit, :id => node)
         show_path = h.url_for(:controller => options[:klass].pluralize, :action => :show, :id => node)
+       
         "<div class='controls'>
           #{ h.link_to '', edit_path, :class => :edit }
           #{ h.link_to '', show_path, :class => :delete, :method => :delete, :data => { :confirm => 'Are you sure?' } }
           <ul class='nav nav-pills'>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#'>Action <span class='caret'></span></a>
-              <ul class='dropdown-menu'>
-                <li><a href='#'>Inbox</a></li>
-                <li><a href='#'>Next</a></li>
-                <li><a href='#'>Project</a></li>
-                <li><a href='#'>Waiting</a></li>
-                <li><a href='#'>Someday</a></li>
-                <li><a href='#'>Finish</a></li>
-              </ul>
-            </li>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#'>State <span class='caret'></span></a>
-              <ul class='dropdown-menu'>
-                <li><a href='#'>Start</a></li>
-                <li><a href='#'>Finish</a></li>
-                <li><a href='#'>interrup-list</a></li>
-              </ul>
-            </li>
-            <li><a href='#'></a></li>
-            <li><a href='#'></a></li>
+          <li><a href='#'></a></li>
           </ul>
         </div>"
       end
