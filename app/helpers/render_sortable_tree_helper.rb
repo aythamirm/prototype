@@ -17,7 +17,7 @@ module RenderSortableTreeHelper
         node = options[:node]
           
         "
-          <li id='#{ node.id }_#{options[:klass]}' class='hyde'>
+          <li id='#{ node.id }_#{options[:klass]}'>
             <div class='item'>
               <i class='handle'></i>
               #{ show_link }
@@ -39,8 +39,8 @@ module RenderSortableTreeHelper
       end
 
       def hide_root
-        if options[:title] == '/' 
-          hyde = "display:none"
+        if options[:node].id == '1_project'  
+          style = "display:none"
         end
       end 
       def controls
@@ -53,7 +53,6 @@ module RenderSortableTreeHelper
           #{ h.link_to '', edit_path, :class => :edit }
           #{ h.link_to '', show_path, :class => :delete, :method => :delete, :data => { :confirm => 'Are you sure?' } }
           <ul class='nav nav-pills'>
-          <li><a href='#'></a></li>
           </ul>
         </div>"
       end

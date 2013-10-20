@@ -63,9 +63,7 @@
           .tab-pane.fade.active.in#inbox          
             .sidebar(style="display:inline")
               %ol.sortable_tree{ data: { max_levels: 5, rebuild_url: rebuild_nodes_url } }
-                = sortable_tree @nodes
-                = render 'projects/form' 
-                = render 'form'    
+                = sortable_tree @nodes   
           .tab-pane.fade#calendar
             = link_to('New Event', '#NewtaskModal', data: { toggle: 'modal' } )
             .calendar
@@ -87,6 +85,7 @@
             esto aquí es el notification. 
           .tab-pane.fade#social  
             esto aquí es el social.               
-
+  = render 'projects/form' 
+  = render 'form' 
 
         
