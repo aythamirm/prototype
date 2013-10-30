@@ -12,14 +12,14 @@
   resources :tasks do
     get '/start_task' => "tasks#start", :as => :start_task
     get '/finish_task' => "tasks#finish", :as => :finish_task
-    post '/state_task' => "tasks#state", :as => :state_task
-    
 
+    
     resources :interruptions
     post '/interruptions' => "interruptions#create", :as => :create_interruption
     get  '/interruptions_stop'=> "interruptions#stop_interruption", :as => :stop_interruption
   end   
-
+  get '/state_task' => "tasks#state", :as => :state_task
+  delete '/trash_task' => "tasks#trash", :as => :trash_task
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

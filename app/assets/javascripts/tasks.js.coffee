@@ -1,6 +1,7 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+#alert('juna')
 $('.dropdown-toggle').dropdown()
 $('.content').on 'click','a.pause', () ->
   $(document).find('.mark').removeClass('mark')
@@ -25,10 +26,10 @@ $('.link_create_interruption').bind 'click', () ->
     error:  ()-> 
       alert(":-(")
 
-$('.content').on 'click', '.resume', ()-> 
+$('.state a').on 'click', '.resume', ()-> 
   thisClicked = $(this)
-  taskID = $(this).parent().data('task-id')
-  resumeUrl = "/tasks/#{taskID}/interruptions_stop"
+  taskURL = $(this).parent().parent().find('a').attr('href')
+  startUrl = "#{taskURL}/interruptions_stop"
   $.ajax
     url: resumeUrl
     type: 'GET'
@@ -40,10 +41,10 @@ $('.content').on 'click', '.resume', ()->
     error:()->  
       alert(":-(")
 
-$('.content').on 'click', '.start', ()->
+$('.state a').on 'click', '.start', ()->
   thisClicked2 = $(this)
-  taskID = $(this).parent().data('task-id')
-  startUrl = "/tasks/#{taskID}/start_task"
+  taskURL = $(this).parent().parent().find('a').attr('href')
+  startUrl = "#{taskURL}/start_task"
   $.ajax
     url: startUrl
     type: 'GET'
@@ -55,10 +56,10 @@ $('.content').on 'click', '.start', ()->
     error:()->  
       alert(":-(")
 
-$('.content').on 'click', '.finish', ()->
+$('.state a').on 'click', '.finish', ()->
   thisClicked3 = $(this)
-  taskID = $(this).parent().data('task-id')
-  finishUrl = "/tasks/#{taskID}/finish_task"
+  taskURL = $(this).parent().parent().find('a').attr('href')
+  startUrl = "#{taskURL}/finish_task"
   $.ajax
     url: finishUrl
     type: 'GET'
@@ -69,18 +70,33 @@ $('.content').on 'click', '.finish', ()->
       alert("task finished")
     error:()->  
       alert(":-(")
+
 $('.link-show-description').bind 'click', () ->
   $(this).parent().find('.hidden-description').show()
 
-$('.content').on 'click', '.state', ()->
-  thisClicked4 = $(this)
-  taskID = $(this).parent().data('task-id')
-  stateUrl = "/tasks/#{taskID}/state_task"
+$('.controls a').click (e)->
+  e.preventDefault()
+  parent = $(this).parent().parent().parent()
   $.ajax
-    url: stateUrl
-    type: 'POST'
-    dataType:'json'
-    success:()->
-      alert(":-)")  
+    url: $(this).attr('href')
+    type: 'GET'
+    dataType: 'json'
+    success:(action)->
+      parent.remove();
+      $(".badge.pull-right.#{action['old_action']}").html(parseInt($(".badge.pull-right.#{action['old_action']}").html()) - 1)
+      $(".badge.pull-right.#{action['new_action']}").html(parseInt($(".badge.pull-right.#{action['new_action']}").html()) + 1)
     error:()->  
-      alert(":-(")  
+      alert(":-(")
+
+$('.calendar ul li a').click (e)->
+  e.preventDefault()
+  parent = $(this).parent()
+  $.ajax
+    url: $(this).attr('href')
+    type: 'GET'
+    dataType: 'json'
+    success:()->
+      alert(":-)") 
+      parent.remove();
+    error:()->  
+      alert(":-(")          

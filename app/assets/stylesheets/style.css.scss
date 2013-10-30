@@ -1,11 +1,5 @@
 /* Start : Override css internal page */
-.modal{
-    background: linear-gradient(to bottom, #45484D 0%, #000000 100%) repeat scroll 0 0 transparent;
-    border-color: #555555;
-    border-radius: 4px 4px 0 0;
-    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
-    padding: 5px 15px;
-}
+
 .sortable_tree .controls a {
   width: 40px;
 }
@@ -17,7 +11,7 @@
 }
  .page-header{
     border-bottom: 1px dotted transparent;
-	color: #2D67A3;
+	  color: #2D67A3;
     display: block;
     font-size: 40px;
     font-weight: 300;
@@ -28,15 +22,44 @@
     text-transform: capitalize;
 	width: 100%;
  }
+ .header-edit{
+    background:#467;
+ } 
+ .header-edit h2{
+   color:white;
+   text-align: center;
+ }
+ .state_control{
+  width: 25px
+ }
+ .sortable_tree .state_control{
+position: absolute;
+top: 0px;
+right: 340px;
+}
+
+ .edit_project{
+  width: 25px
+ }
+ .sortable_tree .edit_project{
+position: absolute;
+top: 8px;
+right: 75px;
+}
+
+ .sortable_tree .edit_task{
+width: 25px;
+position: absolute;
+top: 7px;
+right: 280px;
+}
  .page-content{
-    background: #467;
-    border: 1px solid #4E4E4E;
     font-size: 12px;
     line-height: normal;
     margin: 0;
     padding-left: 25px;
     width: 100%;
-	color:#D1D1D1;
+	color:black;
  }
  .divider {
     background: url("/assets/divider_11x714.png") no-repeat scroll center 0 transparent;

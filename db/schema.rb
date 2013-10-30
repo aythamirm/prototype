@@ -66,8 +66,8 @@ ActiveRecord::Schema.define(:version => 201306251705148) do
     t.date     "due_date"
     t.integer  "priority"
     t.text     "note"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.integer  "user_id"
     t.integer  "rgt"
     t.integer  "lft"
@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(:version => 201306251705148) do
     t.string   "state"
     t.float    "duration"
     t.float    "estimated_time"
-    t.string   "action"
+    t.string   "action",         :default => "Inbox"
     t.date     "start_time"
   end
 

@@ -79,7 +79,6 @@ class TasksController < ApplicationController
   # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
-
     respond_to do |format|
       if @task.update_attributes(task_params)
         format.html { redirect_to @task, notice: 'Task was successfully updated.' }
@@ -103,6 +102,17 @@ class TasksController < ApplicationController
     end
   end
 
+  def trash
+    @nodes = current_user.nodes.where(action: "Trash" )
+    @nodes.each do |n| 
+      n.destroy
+    end  
+    respond_to do |format|
+      format.html { redirect_to "http://localhost:3000/tasks?key=trash" }
+      format.json { head :no_content }
+    end
+  end  
+
   def start
      current_user.tasks.find(params[:task_id]).activate!
      render json: true
@@ -118,8 +128,16 @@ class TasksController < ApplicationController
   end
    
   def state
-  # código aquí
-  end 
+    node = current_user.nodes.find(params[:task_id])
+    node_old_action = node.action.downcase
+    if node.type == 'Task'
+      node.update_attribute(:action, params[:key].capitalize) if params[:key]
+    else
+      node.update_attribute(:action, params[:key].capitalize) if params[:key]  
+    end
+    render json: { old_action: node_old_action, new_action: node.action.downcase }
+  end  
+
   private
 
   def task_params

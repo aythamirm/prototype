@@ -1,6 +1,17 @@
-%h1 Editing task
-
-= render 'form' 
+.header-edit 
+  %h2 Editing task
+.thumbnail
+  .caption
+    = simple_form_for(@task) do |f| 
+      .field= f.input :task_name 
+      .field= f.input :estimated_time 
+      .field= f.input :start_time 
+      .field= f.input :due_date 
+      .field= f.input :priority 
+      .field= f.input :note 
+      .field= f.input :action, priority: [ "Inbox" ], collection: [ "Inbox", "Next", "Project", "Waiting", "Someday"], :include_blank => false 
+      %div= f.select :parent_id, nested_set_options(current_user.projects, nil, method: :type, value: 'Task') {|i| "#{'-' * i.level} #{i.project_title}"  if i.type == 'Project' } 
+      .actions= f.submit  
 
 = link_to 'Show', @task  |
 = link_to 'Back', tasks_path 
