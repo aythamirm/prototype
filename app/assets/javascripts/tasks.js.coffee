@@ -5,9 +5,8 @@
 $('.dropdown-toggle').dropdown()
 
 $('.state').on 'click','a.pause', () ->
-  $(document).find('.mark').removeClass('mark')
-  $(this).addClass('mark')
-  $('.interruption_control').slideDown()
+  $('.state').find('.pause').parent().parent().find('.interruption_control').addClass('mark')
+  $('.state').find('.pause').parent().parent().find('.interruption_control').slideDown()
   
 $('.link_create_interruption').bind 'click', () ->
   taskURL = $('.mark').parent().parent().find('h4').find('a').attr('href')
