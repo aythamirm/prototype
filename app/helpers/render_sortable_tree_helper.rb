@@ -75,6 +75,9 @@ module RenderSortableTreeHelper
             <div class='state_control'>
                 <a href= '#' class = #{caption.downcase} style = #{change2} >#{caption}</a> 
                 <a href= '#'class ='finish' style = #{change}>Finish</a>
+            </div>
+             <div class='interruption_control' style='display:none'>
+                <a href= '#NewInterruptionModal' data-toggle='modal'class ='link_create_interruption' > + Interruption</a>
             </div>"
           else
             "<div class='edit_project'>

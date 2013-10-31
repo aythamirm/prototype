@@ -38,13 +38,20 @@ top: 0px;
 right: 340px;
 }
 
- .edit_project{
+.interruption_control{
   width: 25px
  }
+ .sortable_tree .interruption_control{
+position: absolute;
+top: 0px;
+right: 420px;
+}
+
  .sortable_tree .edit_project{
 position: absolute;
 top: 8px;
-right: 75px;
+right: 90px;
+width: 5px
 }
 
  .sortable_tree .edit_task{

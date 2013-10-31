@@ -1,35 +1,36 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-#alert('juna')
+
 $('.dropdown-toggle').dropdown()
-$('.content').on 'click','a.pause', () ->
+
+$('.state').on 'click','a.pause', () ->
   $(document).find('.mark').removeClass('mark')
   $(this).addClass('mark')
-
-  $('.hidden-form').slideDown()
+  $('.interruption_control').slideDown()
   
 $('.link_create_interruption').bind 'click', () ->
-  taskId = $('.mark').parent().data('task-id')
+  taskURL = $('.mark').parent().parent().find('h4').find('a').attr('href')
   name = $('.name-input').val()
   description = $('.description-input').val()
-  interruptionUrl = "/tasks/#{taskId}/interruptions"
+  interruptionUrl = "#{taskURL}/interruptions"
   $.ajax
     url: interruptionUrl
     type: 'POST'
     dataType: 'json'
     data: { interruption: { name: name, description: description, start_time: new Date } }
     success: ()-> 
-     $('.hidden-form').slideUp()
+     $('.interruption_control').slideUp()
      $('.mark').removeClass('pause').addClass('resume')
      $('.mark').html('Resume')
+     alert(":-)")
     error:  ()-> 
       alert(":-(")
 
-$('.state a').on 'click', '.resume', ()-> 
+$('.state').on 'click', 'a.resume', ()-> 
   thisClicked = $(this)
   taskURL = $(this).parent().parent().find('a').attr('href')
-  startUrl = "#{taskURL}/interruptions_stop"
+  resumeUrl = "#{taskURL}/interruptions_stop"
   $.ajax
     url: resumeUrl
     type: 'GET'
@@ -41,7 +42,7 @@ $('.state a').on 'click', '.resume', ()->
     error:()->  
       alert(":-(")
 
-$('.state a').on 'click', '.start', ()->
+$('.state').on 'click', 'a.start', ()->
   thisClicked2 = $(this)
   taskURL = $(this).parent().parent().find('a').attr('href')
   startUrl = "#{taskURL}/start_task"
@@ -56,10 +57,10 @@ $('.state a').on 'click', '.start', ()->
     error:()->  
       alert(":-(")
 
-$('.state a').on 'click', '.finish', ()->
+$('.state').on 'click', 'a.finish', ()->
   thisClicked3 = $(this)
   taskURL = $(this).parent().parent().find('a').attr('href')
-  startUrl = "#{taskURL}/finish_task"
+  finishUrl = "#{taskURL}/finish_task"
   $.ajax
     url: finishUrl
     type: 'GET'

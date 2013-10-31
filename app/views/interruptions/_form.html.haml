@@ -1,0 +1,19 @@
+.modal.hide.fade#NewInterruptionModal
+  .modal-header
+    %button.close.cabe(data-dismiss="modal" aria-hidden="true") &times
+    %h1 New Interruption
+  .modal-body
+    = simple_form_for @interruption, url: '#' do |f| 
+      - if @interruption.errors.any? 
+        #error_explanation
+          %h2
+            = pluralize(@interruption.errors.count, "error") 
+            prohibited this task from being saved:
+
+          %ul
+          - @interruption.errors.full_messages.each do |msg| 
+            %li= msg 
+      .field= f.input :name, class: 'name-input'
+      .field= f.input :description, class: 'description-input' 
+      .modal-footer  
+        .actions= f.submit  
