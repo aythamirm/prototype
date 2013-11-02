@@ -28,17 +28,20 @@ group :development do
 end
 
 gem 'awesome_nested_set', github:'xxswingxx/awesome_nested_set'
+gem 'activeadmin', github:'gregbell/active_admin'
 gem 'bootstrap-sass'
-gem 'devise' 
+gem 'carrierwave'
+gem 'devise','>= 3.0' 
 gem 'gon'
 gem 'haml' 
-gem  'mysql2'
+gem 'mysql2'
 gem 'rails', '3.2.13'
+gem 'sidetiq'
 gem 'simple_form'
-#gem 'sqlite3'
 gem 'state_machine'
 gem 'strong_parameters'
 gem "the_sortable_tree", "~> 2.3.0"
+gem "watu_table_builder", :require => "table_builder"
 
 
 

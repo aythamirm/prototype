@@ -2,27 +2,14 @@ class TasksController < ApplicationController
   include TheSortableTreeController::Rebuild
   def index
     @interruption = Interruption.new 
-    @nodes = current_user.nodes.all
+    @nodes = current_user.nodes
     @task = Task.new
     @project = Project.new
     @filter = params[:filter].present? ? Filter.new(params[:filter]) : Filter.new
-    
-    if params[:filter].present?
-      # prueba
-      if params[:filter][:search] != ""
-        @nodes = current_user.tasks.where(task_name: params[:filter][:search])  
-      end
-      if params[:state][:to_do]
-        @nodes = current_user.tasks.where(state: params[:filter][:to_do])
-      end  
-
-      if params[:state][:paused] 
-          @nodes = current_user.tasks.where(state: params[:filter][:paused])
-      end  
-      if params[:state][:finished]
-        @nodes = current_user.tasks.where(state: params[:filter][:finished])
-      end  
-    end   
+    @calendar_nodes = current_user.tasks.where('start_time is not NULL')
+    @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
+    state_filte    
+    by_gtd_state
     
 
     respond_to do |format|
@@ -58,6 +45,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+
   # POST /tasks
   # POST /tasks.json
   def create
@@ -75,7 +63,6 @@ class TasksController < ApplicationController
   # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
-
     respond_to do |format|
       if @task.update_attributes(task_params)
         format.html { redirect_to @task, notice: 'Task was successfully updated.' }
@@ -90,14 +77,25 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy
-    @task = Task.find(params[:id])
+    @task = Node.find(params[:id])
     @task.destroy
-
     respond_to do |format|
-      format.html { redirect_to tasks_url }
+      format.html { redirect_to tasks_path}
       format.json { head :no_content }
     end
+    
   end
+
+  def trash
+    @nodes = current_user.nodes.where(action: "Trash" )
+    @nodes.each do |n| 
+      n.destroy
+    end  
+    respond_to do |format|
+      format.html { redirect_to "http://localhost:3000/tasks?key=trash" }
+      format.json { head :no_content }
+    end
+  end  
 
   def start
      current_user.tasks.find(params[:task_id]).activate!
@@ -105,13 +103,61 @@ class TasksController < ApplicationController
   end 
 
   def finish 
+
+    #TODO: chequear interrup
     @task = current_user.tasks.find(params[:task_id]).finish!
     render json: true
   end 
 
+  def by_gtd_state
+    @nodes = @nodes.where(action: params[:key].capitalize) if params[:key]
+  end
+   
+  def state
+    node = current_user.nodes.find(params[:task_id])
+    node_old_action = node.action.downcase
+    if node.type == 'Task'
+      node.update_attribute(:action, params[:key].capitalize) if params[:key]
+    else
+      node.update_attribute(:action, params[:key].capitalize) if params[:key]  
+    end
+    render json: { old_action: node_old_action, new_action: node.action.downcase }
+  end
+
+  def reload_month
+    @date = Date.parse(params[:month].gsub('-', '/')) 
+    @calendar_nodes = current_user.tasks.where('start_time is not NULL') 
+    render partial: 'calendar' 
+  end
+
+  def reload_tree
+    @nodes = current_user.nodes
+    state_filte   
+    by_gtd_state
+    render partial: 'tree'
+  end  
+  
+  def state_filte
+    if params[:filter].present?
+        # prueba
+        if params[:filter][:search] != ""
+          @nodes = current_user.tasks.where(task_name: params[:filter][:search])  
+        end
+        if params[:filter][:state] == "to_do"
+          @nodes = current_user.tasks.where(state: params[:filter][:state])
+        end  
+
+        if params[:filter][:state]== "paused" 
+            @nodes = current_user.tasks.where(state: params[:filter][:state])
+        end  
+        if params[:filter][:state]== "finished"
+          @nodes = current_user.tasks.where(state: params[:filter][:state])
+        end  
+      end  
+    end  
   private
 
   def task_params
-    params.require(:task).permit(:task_name,:estimated_time, :due_date, :note, :priority, :parent_id)
+    params.require(:task).permit(:task_name,:estimated_time, :due_date, :note, :priority, :parent_id, :action, :start_time)
   end   
 end

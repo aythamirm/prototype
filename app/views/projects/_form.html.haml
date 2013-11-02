@@ -1,6 +1,7 @@
 .modal.hide.fade#NewprojectModal
   .modal-header
     %button.close(data-dismiss="modal" aria-hidden="true") &times
+    %h1
   .modal-body
     = simple_form_for(@project) do |f| 
       - if @project.errors.any? 

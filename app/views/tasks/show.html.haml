@@ -1,27 +1,28 @@
 %p#notice= notice 
+.thumbnail
+  .caption
+    %p
+      %b Task:
+      = @task.task_name 
 
-%p
-  %b Task:
-  = @task.task_name 
+    %p
+      %b Due date:
+      = @task.due_date
 
-%p
-  %b Due date:
-  = @task.due_date
+    %p
+      %b Priority:
+      = @task.priority 
 
-%p
-  %b Priority:
-  = @task.priority 
+    %p
+      %b Note:
+      = @task.note 
 
-%p
-  %b Note:
-  = @task.note 
-
-%p
-  %b duration :
-  - suma = 0.0
-  - @task.interruptions.where('interruptions.duration IS NOT NULL  ').each do |valor|
-    - suma = suma + valor.duration  
-  = suma
+    %p
+      %b duration :
+      - suma = 0.0
+      - @task.interruptions.where('interruptions.duration IS NOT NULL  ').each do |valor|
+        - suma = suma + valor.duration  
+      = suma
 
 = link_to 'Edit', edit_task_path(@task)  |
 = link_to 'Back', tasks_path 

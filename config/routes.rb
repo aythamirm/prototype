@@ -1,5 +1,10 @@
  Prototype::Application.routes.draw do
-  devise_for :users, :controllers => { :sessions => "users/sessions" }
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  root :to => 'tasks#index'
+  ActiveAdmin.routes(self)
+  
+  devise_for :users, :controllers => { :sessions => "users/sessions", registrations: "users/registrations" }
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -7,13 +12,17 @@
   resources :tasks do
     get '/start_task' => "tasks#start", :as => :start_task
     get '/finish_task' => "tasks#finish", :as => :finish_task
-    
 
+    
     resources :interruptions
     post '/interruptions' => "interruptions#create", :as => :create_interruption
     get  '/interruptions_stop'=> "interruptions#stop_interruption", :as => :stop_interruption
   end   
-
+  get '/state_task' => "tasks#state", :as => :state_task
+  delete '/trash_task' => "tasks#trash", :as => :trash_task
+  get '/reload_month' => "tasks#reload_month", :as => :reload_month
+  get '/reload_tree' => "tasks#reload_tree", :as => :reload_tree
+  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -68,7 +77,7 @@
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'tasks#index'
+
 
   # See how all your routes lay out with "rake routes"
 

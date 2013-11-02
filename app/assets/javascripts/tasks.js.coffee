@@ -2,73 +2,97 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-$('.content').on 'click','a.pause', () ->
-  $(document).find('.mark').removeClass('mark')
-  $(this).addClass('mark')
+$('.dropdown-toggle').dropdown()
 
-  $('.hidden-form').slideDown()
+$('.state').on 'click','a.pause', () ->
+  $(document).find('.mark').removeClass('mark')
+  $(this).parent().parent().parent().addClass('mark')
+  $(this).parent().parent().css( "background-color": "#FF9900")
   
-$('.link_create_interruption').bind 'click', () ->
-  taskId = $('.mark').parent().data('task-id')
+$('#NewInterruptionModal .link_create_interruption').bind 'click', (e) ->
+  e.preventDefault()
+  taskURL = $($('.mark').find('a')[0]).attr('href')
   name = $('.name-input').val()
   description = $('.description-input').val()
-  interruptionUrl = "/tasks/#{taskId}/interruptions"
+  interruptionUrl = "#{taskURL}/interruptions"
   $.ajax
     url: interruptionUrl
     type: 'POST'
     dataType: 'json'
     data: { interruption: { name: name, description: description, start_time: new Date } }
-    success: ()-> 
-     $('.hidden-form').slideUp()
-     $('.mark').removeClass('pause').addClass('resume')
-     $('.mark').html('Resume')
+    success: ()->
+      $('.mark a.resume').show()
+      $('.mark a.pause').hide()
+      $('#NewInterruptionModal .close.cabe').click()
     error:  ()-> 
       alert(":-(")
 
-$('.content').on 'click', '.resume', ()-> 
+$('.state').on 'click', 'a.resume', ()-> 
   thisClicked = $(this)
-  taskID = $(this).parent().data('task-id')
-  resumeUrl = "/tasks/#{taskID}/interruptions_stop"
+  taskURL = $(this).parent().parent().find('a').attr('href')
+  resumeUrl = "#{taskURL}/interruptions_stop"
   $.ajax
     url: resumeUrl
     type: 'GET'
     dataType: 'json'
     data: {end_time: new Date}
     success:()->
-      thisClicked.removeClass('resume').addClass('pause')
-      thisClicked.html('Pause')
+      thisClicked.parent().parent().find('a.pause').show()
+      thisClicked.parent().parent().find('a.resume').hide()
     error:()->  
       alert(":-(")
 
-$('.content').on 'click', '.start', ()->
+$('.state').on 'click', 'a.start', ()->
   thisClicked2 = $(this)
-  taskID = $(this).parent().data('task-id')
-  startUrl = "/tasks/#{taskID}/start_task"
+  taskURL = $(this).parent().parent().find('a').attr('href')
+  startUrl = "#{taskURL}/start_task"
   $.ajax
     url: startUrl
     type: 'GET'
-    dataype:'json'
+    dataType:'json'
     success:()->
-      thisClicked2.removeClass('start').addClass('pause')
-      thisClicked2.html('Pause')
+      thisClicked2.hide()
+      thisClicked2.parent().find('.pause').show()
       thisClicked2.parent().find('.finish').show()
+      thisClicked2.parent().parent().css( "background-color": "#33FF33")
     error:()->  
       alert(":-(")
 
-$('.content').on 'click', '.finish', ()->
+$('.state').on 'click', 'a.finish', ()->
   thisClicked3 = $(this)
-  taskID = $(this).parent().data('task-id')
-  finishUrl = "/tasks/#{taskID}/finish_task"
+  taskURL = $(this).parent().parent().find('a').attr('href')
+  finishUrl = "#{taskURL}/finish_task"
   $.ajax
     url: finishUrl
     type: 'GET'
-    dataype:'json'
+    dataType:'json'
     success:()->
       thisClicked3.hide()
       thisClicked3.parent().find('.pause').hide()
       alert("task finished")
+      thisClicked3.parent().parent().css( "background-color": "#FF3300")
     error:()->  
       alert(":-(")
 
 $('.link-show-description').bind 'click', () ->
   $(this).parent().find('.hidden-description').show()
+
+$('.controls a').click (e)->
+  e.preventDefault()
+  parent = $(this).parent().parent().parent()
+  $.ajax
+    url: $(this).attr('href')
+    type: 'GET'
+    dataType: 'json'
+    success:(action)->
+      parent.remove();
+      $(".badge.pull-right.#{action['old_action']}").html(parseInt($(".badge.pull-right.#{action['old_action']}").html()) - 1)
+      $(".badge.pull-right.#{action['new_action']}").html(parseInt($(".badge.pull-right.#{action['new_action']}").html()) + 1)
+    error:()->  
+      alert(":-(")
+       
+$('.calendar').on 'click', 'a.next, a.previous', (e)->
+  e.preventDefault()
+  $('.calendar').load("/reload_month?month=#{$(this).data('month')}")
+ 
+

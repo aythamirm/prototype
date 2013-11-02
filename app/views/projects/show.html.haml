@@ -1,9 +1,11 @@
 %p#notice= notice
-%p
-  %b Title:
-  = @project.project_title 
+.thumbnail
+  .caption
+    %p
+      %b Title:
+      = @project.project_title 
 
-= select_tag 'parent_id', options_for_select(nested_set_options(current_user.projects, nil, method: :type, value: 'Task') {|i| "|#{'-' * i.level} #{i.project_title}" } ) 
+    = select_tag 'parent_id', options_for_select(nested_set_options(current_user.projects, nil, method: :type, value: 'Task') {|i| "|#{'-' * i.level} #{i.project_title}" } ) 
 
 
 

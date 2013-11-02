@@ -1,5 +1,11 @@
-%h1 Editing project
-= render 'form' 
+.header-edit 
+  %h2 Editing project
+.thumbnail
+  .caption
+    = simple_form_for(@project) do |f|
+      .field= f.input :project_title 
+      .field= f.select :parent_id, nested_set_options(current_user.projects, nil, method: :type, value: 'Task') {|i| "#{'-' * i.level} #{i.project_title}"  if i.type == 'Project' } 
+      .actions= f.submit 
 
 = link_to 'Show', @project  |
-= link_to 'Back', projects_path 
+= link_to 'Back', "http://localhost:3000/tasks" 

@@ -1,10 +1,7 @@
 /* Start : Override css internal page */
-.modal{
-    background: linear-gradient(to bottom, #45484D 0%, #000000 100%) repeat scroll 0 0 transparent;
-    border-color: #555555;
-    border-radius: 4px 4px 0 0;
-    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
-    padding: 5px 15px;
+
+.sortable_tree .controls a {
+  width: 40px;
 }
 .alert adjusted alert-info{
  
@@ -14,7 +11,7 @@
 }
  .page-header{
     border-bottom: 1px dotted transparent;
-	color: #2D67A3;
+	  color: #2D67A3;
     display: block;
     font-size: 40px;
     font-weight: 300;
@@ -25,15 +22,51 @@
     text-transform: capitalize;
 	width: 100%;
  }
+ .header-edit{
+    background:#467;
+ } 
+ .header-edit h2{
+   color:white;
+   text-align: center;
+ }
+ .state_control{
+  width: 25px
+ }
+ .sortable_tree .state_control{
+position: absolute;
+top: 0px;
+right: 340px;
+}
+
+.interruption_control{
+  width: 25px
+ }
+ .sortable_tree .interruption_control{
+position: absolute;
+top: 0px;
+right: 420px;
+}
+
+ .sortable_tree .edit_project{
+position: absolute;
+top: 8px;
+right: 90px;
+width: 5px
+}
+
+ .sortable_tree .edit_task{
+width: 25px;
+position: absolute;
+top: 7px;
+right: 280px;
+}
  .page-content{
-    background: #467;
-    border: 1px solid #4E4E4E;
     font-size: 12px;
     line-height: normal;
     margin: 0;
     padding-left: 25px;
     width: 100%;
-	color:#D1D1D1;
+	color:black;
  }
  .divider {
     background: url("/assets/divider_11x714.png") no-repeat scroll center 0 transparent;
@@ -122,6 +155,71 @@
 }
 
 /* End: Override Bootstrap Accordian */
+
+/* Start: CSS for calendar */
+#calendar table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#calendar td,
+#calendar th {
+  font-family: "Lucida Grande",arial,helvetica,sans-serif;
+  font-size: 10px;
+  padding: 6px;
+  border: 1px solid #999;
+}
+
+#calendar th {
+  background: #DDD;
+  color: #666;
+  text-align: center;
+  width: 14.2857142857143%;
+}
+
+#calendar td {
+  background: #FFF;
+  color: #777;
+  height: 80px;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+#calendar .notmonth {
+  color: #CCC;
+}
+
+#calendar #month {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#calendar #month a, #calendar #month a:hover {
+  text-decoration: none;
+  padding: 0 10px;
+  color: #999;
+}
+
+#calendar .today {
+  background-color: #D7F2FF;
+}
+
+#calendar ul {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+}
+
+#calendar li {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  text-align: center;
+}
+/* End :CSS for calendar */
 
 .content {
   padding: 30px 0;
