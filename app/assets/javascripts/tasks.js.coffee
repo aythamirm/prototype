@@ -96,4 +96,3 @@ $('.calendar').on 'click', 'a.next, a.previous', (e)->
   $('.calendar').load("/reload_month?month=#{$(this).data('month')}")
  
 
-     

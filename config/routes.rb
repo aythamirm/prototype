@@ -21,6 +21,7 @@
   get '/state_task' => "tasks#state", :as => :state_task
   delete '/trash_task' => "tasks#trash", :as => :trash_task
   get '/reload_month' => "tasks#reload_month", :as => :reload_month
+  get '/reload_tree' => "tasks#reload_tree", :as => :reload_tree
   
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

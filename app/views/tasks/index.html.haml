@@ -65,7 +65,7 @@
             = #link_to 'CLEAR', '#', style: hidden
             .sidebar(style="display:inline")
               %ol.sortable_tree{ data: { max_levels: 5, rebuild_url: rebuild_nodes_url } }
-                .state= sortable_tree @nodes   
+                .state= render 'tree' 
           .tab-pane.fade#calendar
             = link_to('New Event', '#NewtaskModal', data: { toggle: 'modal' } )
             .calendar= render 'calendar'  

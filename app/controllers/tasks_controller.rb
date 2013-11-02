@@ -8,23 +8,7 @@ class TasksController < ApplicationController
     @filter = params[:filter].present? ? Filter.new(params[:filter]) : Filter.new
     @calendar_nodes = current_user.tasks.where('start_time is not NULL')
     @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
-    
-    if params[:filter].present?
-      # prueba
-      if params[:filter][:search] != ""
-        @nodes = current_user.tasks.where(task_name: params[:filter][:search])  
-      end
-      if params[:filter][:state] == "to_do"
-        @nodes = current_user.tasks.where(state: params[:filter][:state])
-      end  
-
-      if params[:filter][:state]== "paused" 
-          @nodes = current_user.tasks.where(state: params[:filter][:state])
-      end  
-      if params[:filter][:state]== "finished"
-        @nodes = current_user.tasks.where(state: params[:filter][:state])
-      end  
-    end   
+    state_filte    
     by_gtd_state
     
 
@@ -95,7 +79,11 @@ class TasksController < ApplicationController
   def destroy
     @task = Node.find(params[:id])
     @task.destroy
-    render json:true
+    respond_to do |format|
+      format.html { redirect_to tasks_path}
+      format.json { head :no_content }
+    end
+    
   end
 
   def trash
@@ -142,6 +130,31 @@ class TasksController < ApplicationController
     render partial: 'calendar' 
   end
 
+  def reload_tree
+    @nodes = current_user.nodes
+    state_filte   
+    by_gtd_state
+    render partial: 'tree'
+  end  
+  
+  def state_filte
+    if params[:filter].present?
+        # prueba
+        if params[:filter][:search] != ""
+          @nodes = current_user.tasks.where(task_name: params[:filter][:search])  
+        end
+        if params[:filter][:state] == "to_do"
+          @nodes = current_user.tasks.where(state: params[:filter][:state])
+        end  
+
+        if params[:filter][:state]== "paused" 
+            @nodes = current_user.tasks.where(state: params[:filter][:state])
+        end  
+        if params[:filter][:state]== "finished"
+          @nodes = current_user.tasks.where(state: params[:filter][:state])
+        end  
+      end  
+    end  
   private
 
   def task_params
