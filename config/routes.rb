@@ -20,6 +20,8 @@
   end   
   get '/state_task' => "tasks#state", :as => :state_task
   delete '/trash_task' => "tasks#trash", :as => :trash_task
+  get '/next_month' => "tasks#next_month", :as => :next_month
+  get '/previous_month' => "tasks#previous_month", :as => :previous_month
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

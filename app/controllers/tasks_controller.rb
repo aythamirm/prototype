@@ -93,13 +93,9 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy
-    @task = Task.find(params[:id])
+    @task = Node.find(params[:id])
     @task.destroy
-
-    respond_to do |format|
-      format.html { redirect_to tasks_url }
-      format.json { head :no_content }
-    end
+    render json:true
   end
 
   def trash
@@ -119,6 +115,8 @@ class TasksController < ApplicationController
   end 
 
   def finish 
+
+    #TODO: chequear interrup
     @task = current_user.tasks.find(params[:task_id]).finish!
     render json: true
   end 
@@ -136,6 +134,18 @@ class TasksController < ApplicationController
       node.update_attribute(:action, params[:key].capitalize) if params[:key]  
     end
     render json: { old_action: node_old_action, new_action: node.action.downcase }
+  end
+
+  def next_month
+    @date = Date.parse(params[:month].gsub('-', '/')) 
+    @calendar_nodes = current_user.tasks.where('start_time is not NULL') 
+    render partial: 'calendar' 
+  end  
+  
+  def previous_month
+    @date = Date.parse(params[:month].gsub('-', '/'))
+    @calendar_nodes = current_user.tasks.where('start_time is not NULL')
+    render partial: 'calendar'   
   end  
 
   private

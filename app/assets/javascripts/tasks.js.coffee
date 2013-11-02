@@ -5,11 +5,13 @@
 $('.dropdown-toggle').dropdown()
 
 $('.state').on 'click','a.pause', () ->
-  $('.state').find('.pause').parent().parent().find('.interruption_control').addClass('mark')
-  $('.state').find('.pause').parent().parent().find('.interruption_control').slideDown()
+  $(document).find('.mark').removeClass('mark')
+  $(this).parent().parent().parent().addClass('mark')
+  $(this).parent().parent().css( "background-color": "#FF9900")
   
-$('.link_create_interruption').bind 'click', () ->
-  taskURL = $('.mark').parent().parent().find('h4').find('a').attr('href')
+$('#NewInterruptionModal .link_create_interruption').bind 'click', (e) ->
+  e.preventDefault()
+  taskURL = $($('.mark').find('a')[0]).attr('href')
   name = $('.name-input').val()
   description = $('.description-input').val()
   interruptionUrl = "#{taskURL}/interruptions"
@@ -18,11 +20,10 @@ $('.link_create_interruption').bind 'click', () ->
     type: 'POST'
     dataType: 'json'
     data: { interruption: { name: name, description: description, start_time: new Date } }
-    success: ()-> 
-     $('.interruption_control').slideUp()
-     $('.mark').removeClass('pause').addClass('resume')
-     $('.mark').html('Resume')
-     alert(":-)")
+    success: ()->
+      $('.mark a.resume').show()
+      $('.mark a.pause').hide()
+      $('#NewInterruptionModal .close.cabe').click()
     error:  ()-> 
       alert(":-(")
 
@@ -36,8 +37,8 @@ $('.state').on 'click', 'a.resume', ()->
     dataType: 'json'
     data: {end_time: new Date}
     success:()->
-      thisClicked.removeClass('resume').addClass('pause')
-      thisClicked.html('Pause')
+      thisClicked.parent().parent().find('a.pause').show()
+      thisClicked.parent().parent().find('a.resume').hide()
     error:()->  
       alert(":-(")
 
@@ -50,9 +51,10 @@ $('.state').on 'click', 'a.start', ()->
     type: 'GET'
     dataType:'json'
     success:()->
-      thisClicked2.removeClass('start').addClass('pause')
-      thisClicked2.html('Pause')
+      thisClicked2.hide()
+      thisClicked2.parent().find('.pause').show()
       thisClicked2.parent().find('.finish').show()
+      thisClicked2.parent().parent().css( "background-color": "#33FF33")
     error:()->  
       alert(":-(")
 
@@ -68,6 +70,7 @@ $('.state').on 'click', 'a.finish', ()->
       thisClicked3.hide()
       thisClicked3.parent().find('.pause').hide()
       alert("task finished")
+      thisClicked3.parent().parent().css( "background-color": "#FF3300")
     error:()->  
       alert(":-(")
 
@@ -87,16 +90,31 @@ $('.controls a').click (e)->
       $(".badge.pull-right.#{action['new_action']}").html(parseInt($(".badge.pull-right.#{action['new_action']}").html()) + 1)
     error:()->  
       alert(":-(")
-
-$('.calendar ul li a').click (e)->
+       
+$('.calendar').on 'click', 'a.next', (e)->
   e.preventDefault()
-  parent = $(this).parent()
+  taskURL = $(this).attr('href')
+  next_monthUrl = "#{taskURL}/next_month"
   $.ajax
-    url: $(this).attr('href')
+    url: next_monthUrl
     type: 'GET'
-    dataType: 'json'
+    dataType:'json'
     success:()->
-      alert(":-)") 
-      parent.remove();
+      alert(":-)")
     error:()->  
-      alert(":-(")          
+      alert(":-(")
+
+$('.calendar').on 'click', 'a.previous', (e)->
+  e.preventDefault()
+  taskURL = $(this).attr('href')
+  previous_monthUrl = "#{taskURL}/previous_month"
+  $.ajax
+    url: previous_monthUrl
+    type: 'GET'
+    dataType:'json'
+    success:()->
+      alert(":-)")
+    error:()->  
+      alert(":-(")
+
+     

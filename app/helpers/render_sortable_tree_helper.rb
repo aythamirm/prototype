@@ -45,20 +45,18 @@ module RenderSortableTreeHelper
         node = options[:node]
         if node.user.nodes.root != node
           if node.type == 'Task'
-              change = "display:none"
-              change2 = "display:block"
-              case node.state
-              when 'active'
-                caption = 'Pause'
-                change = "display:block" 
-              when 'paused'
-                caption = 'Resume'
-              when 'to_do'
-                caption = 'Start'
-              when 'finished'
-                change2 = "display:none"
-                caption = 'Lala'
-              end 
+            visibility = { finish: true } 
+            case node.state
+            when 'active'
+              visibility[:pause] = true
+            when 'paused'
+              visibility[:resume] = true
+            when 'to_do'
+              visibility[:start] = true
+              visibility[:finish] = false
+            when 'finished'
+              visibility[:finish] = false
+            end 
             "
             <div class='edit_task'>
               <a href= '/tasks/#{node.id}/edit'>Edit</a>
@@ -73,11 +71,10 @@ module RenderSortableTreeHelper
               <a href= '/state_task?key=logBook&task_id=#{node.id}'>logbook</a>
             </div>
             <div class='state_control'>
-                <a href= '#' class = #{caption.downcase} style = #{change2} >#{caption}</a> 
-                <a href= '#'class ='finish' style = #{change}>Finish</a>
-            </div>
-             <div class='interruption_control' style='display:none'>
-                <a href= '#NewInterruptionModal' data-toggle='modal'class ='link_create_interruption' > + Interruption</a>
+                <a href= '#' class ='start' style = #{visibility[:start] == true ? 'display:block' : 'display:none' } >Start</a> 
+                <a href= '#NewInterruptionModal' data-toggle='modal' style = #{visibility[:pause] == true ? 'display:block' : 'display:none' } class='pause'>Pause </a>
+                <a href= '#'class ='resume' style = #{visibility[:resume] == true ? 'display:block' : 'display:none' }>Resume</a>
+                <a href= '#'class ='finish' style = #{visibility[:finish] == true ? 'display:block' : 'display:none' }>Finish</a>
             </div>"
           else
             "<div class='edit_project'>
