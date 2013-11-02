@@ -19,7 +19,7 @@ module RenderSortableTreeHelper
         klass = root_node == node ? 'root' : 'children'
         hidden = root_node == node  ? 'display:none' : nil
           
-          
+        
         "
           <li id='#{ node.id }_#{options[:klass]}' class = '#{klass}'>
             <div class='item' style='#{hidden}'>

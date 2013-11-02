@@ -1,8 +1,7 @@
 %h2#month
-  = link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m"), class: 'previous'
+  = link_to "<", '#', data: { month: (@date.beginning_of_month-1).strftime("%Y-%m") }, class: 'previous'
   = h @date.strftime("%B %Y") 
-  = link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m"), class: 'next' 
-  
+  = link_to ">", '#', data: { month: (@date.beginning_of_month+1).strftime("%Y-%m") }, class: 'next'
 = calendar_for @calendar_nodes, :year => @date.year, :month => @date.month do |calendar| 
   = calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
   = calendar.day(:day_method => :start_time )  do |date, nodes| 

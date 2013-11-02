@@ -136,17 +136,11 @@ class TasksController < ApplicationController
     render json: { old_action: node_old_action, new_action: node.action.downcase }
   end
 
-  def next_month
+  def reload_month
     @date = Date.parse(params[:month].gsub('-', '/')) 
     @calendar_nodes = current_user.tasks.where('start_time is not NULL') 
     render partial: 'calendar' 
-  end  
-  
-  def previous_month
-    @date = Date.parse(params[:month].gsub('-', '/'))
-    @calendar_nodes = current_user.tasks.where('start_time is not NULL')
-    render partial: 'calendar'   
-  end  
+  end
 
   private
 

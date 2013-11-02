@@ -91,30 +91,9 @@ $('.controls a').click (e)->
     error:()->  
       alert(":-(")
        
-$('.calendar').on 'click', 'a.next', (e)->
+$('.calendar').on 'click', 'a.next, a.previous', (e)->
   e.preventDefault()
-  taskURL = $(this).attr('href')
-  next_monthUrl = "#{taskURL}/next_month"
-  $.ajax
-    url: next_monthUrl
-    type: 'GET'
-    dataType:'json'
-    success:()->
-      alert(":-)")
-    error:()->  
-      alert(":-(")
-
-$('.calendar').on 'click', 'a.previous', (e)->
-  e.preventDefault()
-  taskURL = $(this).attr('href')
-  previous_monthUrl = "#{taskURL}/previous_month"
-  $.ajax
-    url: previous_monthUrl
-    type: 'GET'
-    dataType:'json'
-    success:()->
-      alert(":-)")
-    error:()->  
-      alert(":-(")
+  $('.calendar').load("/reload_month?month=#{$(this).data('month')}")
+ 
 
      
