@@ -7,7 +7,8 @@ $('.dropdown-toggle').dropdown()
 $('.state').on 'click','a.pause', () ->
   $(document).find('.mark').removeClass('mark')
   $(this).parent().parent().parent().addClass('mark')
-  $(this).parent().parent().css( "background-color": "#FF9900")
+  
+
   
 $('#NewInterruptionModal .link_create_interruption').bind 'click', (e) ->
   e.preventDefault()
@@ -23,6 +24,7 @@ $('#NewInterruptionModal .link_create_interruption').bind 'click', (e) ->
     success: ()->
       $('.mark a.resume').show()
       $('.mark a.pause').hide()
+      $('.mark .item').removeClass().addClass('item paused')
       $('#NewInterruptionModal .close.cabe').click()
     error:  ()-> 
       alert(":-(")
@@ -54,7 +56,7 @@ $('.state').on 'click', 'a.start', ()->
       thisClicked2.hide()
       thisClicked2.parent().find('.pause').show()
       thisClicked2.parent().find('.finish').show()
-      thisClicked2.parent().parent().css( "background-color": "#33FF33")
+      thisClicked2.parent().parent().removeClass().addClass('item active')
     error:()->  
       alert(":-(")
 
@@ -69,8 +71,8 @@ $('.state').on 'click', 'a.finish', ()->
     success:()->
       thisClicked3.hide()
       thisClicked3.parent().find('.pause').hide()
+      thisClicked3.parent().parent().removeClass().addClass('item finished')
       alert("task finished")
-      thisClicked3.parent().parent().css( "background-color": "#FF3300")
     error:()->  
       alert(":-(")
 

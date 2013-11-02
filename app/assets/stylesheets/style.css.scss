@@ -37,10 +37,33 @@ position: absolute;
 top: 0px;
 right: 340px;
 }
+.state{
 
-.interruption_control{
-  width: 25px
- }
+  
+  li div{
+
+  &.active{
+    background:green !important;
+  }
+  &.paused{
+    background:orange !important;
+  }
+
+  &.to_do {
+    background:gray !important;
+  }
+
+  &.finished{
+   background:red !important;
+  }
+
+  &.interruption_control{
+    width: 25px
+  }
+}
+}
+
+
  .sortable_tree .interruption_control{
 position: absolute;
 top: 0px;

@@ -17,12 +17,10 @@ module RenderSortableTreeHelper
         node = options[:node]
         root_node = node.user.nodes.root
         klass = root_node == node ? 'root' : 'children'
-        hidden = root_node == node  ? 'display:none' : nil
-          
-        
+        hidden = root_node == node  ? 'display:none' : nil     
         "
           <li id='#{ node.id }_#{options[:klass]}' class = '#{klass}'>
-            <div class='item' style='#{hidden}'>
+            <div class='item #{node.state}' style='#{hidden}'>
               <i class='handle'></i>
               #{ show_link }
               #{ controls }
