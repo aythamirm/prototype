@@ -18,11 +18,15 @@
       = @task.note 
 
     %p
-      %b duration :
+      %b duration unproductive time :
       - suma = 0.0
       - @task.interruptions.where('interruptions.duration IS NOT NULL  ').each do |valor|
         - suma = suma + valor.duration  
       = suma
 
+    %p
+      %b duration productive time:  
+      = #seconds = Time.parse(params[:created_at].to_s) - Time.now 
+      
 = link_to 'Edit', edit_task_path(@task)  |
 = link_to 'Back', tasks_path 
