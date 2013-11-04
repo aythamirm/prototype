@@ -8,7 +8,9 @@
         ]);
 
         var options = {
-          title: 'Total productive and unproductive time'
+          title: 'Total productive and unproductive time',
+          width:900,
+          height:500
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));

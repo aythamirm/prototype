@@ -14,7 +14,9 @@ google.load("visualization", "1", {packages:["corechart"]});
 
         var options = {
           title: 'productive and unproductive time over the week',
-          hAxis: {title: 'week', titleTextStyle: {color: 'red'}}
+          hAxis: {title: 'week', titleTextStyle: {color: 'red'}},
+          width:800,
+          height:500
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));

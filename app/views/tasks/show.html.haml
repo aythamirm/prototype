@@ -26,7 +26,6 @@
 
     %p
       %b duration productive time:  
-      = #seconds = Time.parse(params[:created_at].to_s) - Time.now 
-      
+      = #seconds = DateTime.parse(params[:finish_time].to_s) - DateTime.parse(params[:created_at]) 
 = link_to 'Edit', edit_task_path(@task)  |
 = link_to 'Back', tasks_path 

@@ -103,8 +103,14 @@ class TasksController < ApplicationController
   end 
 
   def finish 
-
-    #TODO: chequear interrup
+    #TODO: chequear interrup 
+    current_user.tasks.find(params[:task_id]).finish!.params[:finish_time] = time.now
+    suma = 0.0
+    current_user.tasks.interruptions.where('interruptions.duration IS NOT NULL  ').each do |valor|
+        suma = suma + valor.duration  
+    end    
+    current_user.params[:unproductive_time] = suma
+    current_user.params[:productive_time] = (DateTime.parse(params[:finish_time].to_s)- DateTime.parse(params[:created_at].to_s))-(suma)
     @task = current_user.tasks.find(params[:task_id]).finish!
     render json: true
   end 
