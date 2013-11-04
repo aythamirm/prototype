@@ -76,19 +76,15 @@ ActiveRecord::Schema.define(:version => 201306251705148) do
     t.float    "duration"
     t.float    "estimated_time"
     t.string   "action",         :default => "Inbox"
-<<<<<<< HEAD
     t.datetime "start_time"
-=======
-    t.date     "start_time"
     t.datetime "finish_time"
->>>>>>> google_charts
   end
 
   add_index "nodes", ["user_id"], :name => "index_nodes_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "email",                  :default => "",  :null => false
+    t.string   "encrypted_password",     :default => "",  :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -97,13 +93,13 @@ ActiveRecord::Schema.define(:version => 201306251705148) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
+    t.float    "total_time",             :default => 0.0
+    t.float    "unproductive_time",      :default => 0.0
     t.string   "first_name"
     t.string   "last_name"
     t.string   "avatar"
-    t.float    "productive_time"
-    t.float    "unproductive_time"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
