@@ -73,13 +73,13 @@
                       
           .tab-pane.fade#statistics
             .header-edit 
-              %h2 Tiempo productivo e improductivo total 
+              %h2 Total productive and unproductive time
             .thumbnail
-              piechart
+              #piechart{style:"width: 900px; height: 500px"}
             .header-edit    
-              %h2 Tiempo productivo e improductivo a lo largo de la semana 
+              %h2 productive and unproductive time over the week
             .thumbnail
-              columchart       
+              #chart_div{style:"width: 1200px; height: 500px"}     
   = render 'projects/form' 
   = render 'form'
   = render 'interruptions/form' 

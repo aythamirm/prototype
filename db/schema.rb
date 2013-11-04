@@ -76,7 +76,12 @@ ActiveRecord::Schema.define(:version => 201306251705148) do
     t.float    "duration"
     t.float    "estimated_time"
     t.string   "action",         :default => "Inbox"
+<<<<<<< HEAD
     t.datetime "start_time"
+=======
+    t.date     "start_time"
+    t.datetime "finish_time"
+>>>>>>> google_charts
   end
 
   add_index "nodes", ["user_id"], :name => "index_nodes_on_user_id"
@@ -97,6 +102,8 @@ ActiveRecord::Schema.define(:version => 201306251705148) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "avatar"
+    t.float    "productive_time"
+    t.float    "unproductive_time"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

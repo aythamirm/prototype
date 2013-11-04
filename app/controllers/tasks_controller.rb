@@ -114,7 +114,6 @@ class TasksController < ApplicationController
     current_user.unproductive_time += unproductive_time
     current_user.total_time += (@task.finish - @task.start_time)
     current_user.save
-
     render json: true
   end 
 

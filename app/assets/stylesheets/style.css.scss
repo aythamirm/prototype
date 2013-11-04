@@ -43,7 +43,7 @@ right: 340px;
   li div{
 
   &.active{
-    background:green !important;
+    background:#678e8d !important;
   }
   &.paused{
     background:orange !important;
@@ -54,7 +54,7 @@ right: 340px;
   }
 
   &.finished{
-   background:red !important;
+   background:#468847!important;
   }
 
   &.interruption_control{
@@ -62,7 +62,10 @@ right: 340px;
   }
 }
 }
-
+#piechart{
+  width:900px; 
+  height: 500px
+}
 
  .sortable_tree .interruption_control{
 position: absolute;
