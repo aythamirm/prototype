@@ -103,9 +103,18 @@ class TasksController < ApplicationController
   end 
 
   def finish 
+    #TODO: chequear interrup 
+    @task = current_user.tasks.find(params[:task_id])
+    @task.finish_time = Time.now
+    @task.finish!
+    unproductive_time = 0
+    @task.interruptions.each do |interruption|
+      unproductive_time = unproductive_time + interruption.duration  
+    end    
+    current_user.unproductive_time += unproductive_time
+    current_user.total_time += (@task.finish - @task.start_time)
+    current_user.save
 
-    #TODO: chequear interrup
-    @task = current_user.tasks.find(params[:task_id]).finish!
     render json: true
   end 
 
