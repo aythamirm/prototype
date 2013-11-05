@@ -10,7 +10,8 @@ class TasksController < ApplicationController
     @date = params[:month] ? Date.parse(params[:month].gsub('-', '/')) : Date.today
     state_filte    
     by_gtd_state
-    
+    gon.total_unproductive_time = current_user.unproductive_time
+    gon.total_productive_time = current_user.total_time - current_user.unproductive_time
 
     respond_to do |format|
       format.html #index.html.erb
@@ -112,7 +113,7 @@ class TasksController < ApplicationController
       unproductive_time = unproductive_time + interruption.duration  
     end    
     current_user.unproductive_time += unproductive_time
-    current_user.total_time += (@task.finish - @task.start_time)
+    current_user.total_time += (@task.finish_time - @task.start_time)
     current_user.save
     render json: true
   end 

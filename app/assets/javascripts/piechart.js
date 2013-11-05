@@ -1,10 +1,11 @@
+    
     google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Total time', 'Results'],
-          ['productive time',     11],
-          ['unproductive time',      2]  
+          ['productive time',     gon.total_productive_time],
+          ['unproductive time',   gon.total_unproductive_time]  
         ]);
 
         var options = {

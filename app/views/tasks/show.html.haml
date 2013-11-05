@@ -26,6 +26,6 @@
 
     %p
       %b duration productive time:  
-      = #seconds = DateTime.parse(params[:finish_time].to_s) - DateTime.parse(params[:created_at]) 
+      = current_user.total_time += (@task.finish_time - @task.start_time) 
 = link_to 'Edit', edit_task_path(@task)  |
 = link_to 'Back', tasks_path 
