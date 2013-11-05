@@ -96,5 +96,8 @@ $('.controls a').click (e)->
 $('.calendar').on 'click', 'a.next, a.previous', (e)->
   e.preventDefault()
   $('.calendar').load("/reload_month?month=#{$(this).data('month')}")
+$('#loginModal, #NewInterruptionModal, #SignupModal, #NewtaskModal, #NewprojectModal').on 'show.bs.modal', () ->
+  $(this).show()
+  ($('.modal-backdrop')[0]).remove()  
  
 
