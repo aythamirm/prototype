@@ -35,7 +35,7 @@
  .sortable_tree .state_control{
 position: absolute;
 top: 0px;
-right: 340px;
+right: 700px;
 }
 .state{
 
@@ -72,19 +72,57 @@ position: absolute;
 top: 0px;
 right: 420px;
 }
+.sortable_tree .controls a {
+width: 60px !important;
+}
 
  .sortable_tree .edit_project{
 position: absolute;
 top: 8px;
-right: 90px;
-width: 5px
+right: 80px;
+width: 5px;
+}
+
+.design{
+   a{
+    text-decoration: none !important;
+    color:white !important;
+  }
+}
+.design_up_footer{
+
+  h3, h2{
+    text-align: center !important;
+    color: black !important;
+  }
+
+  a{
+    text-decoration: none !important;
+    color:red !important;
+    text-align: center !important;
+    font-size: 14px !important;
+  }
+  .span4{
+    text-align: center !important;
+    display: inline-block !important;
+  }
+   
+}
+.control-foot{
+  a{
+    text-decoration: none !important;
+    color:white !important;
+  }
+  .nav > li > a:hover, .nav > li > a:focus {
+    background-color: black !important;
+  }
 }
 
  .sortable_tree .edit_task{
 width: 25px;
 position: absolute;
 top: 7px;
-right: 280px;
+right: 600px;
 }
  .page-content{
     font-size: 12px;
@@ -92,7 +130,7 @@ right: 280px;
     margin: 0;
     padding-left: 25px;
     width: 100%;
-	color:black;
+	  color:black;
  }
  .divider {
     background: url("/assets/divider_11x714.png") no-repeat scroll center 0 transparent;
@@ -457,4 +495,4 @@ footer {
   border-top: 0;  
   border-bottom: 1px solid #333;
 }
-/* End: Bootbusiness specific CSS */
+

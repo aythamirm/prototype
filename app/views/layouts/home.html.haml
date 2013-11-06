@@ -18,11 +18,12 @@
     #main{:role => "main"}
       .container
         .content
-          .row
-            .span12
-              = render 'layouts/messages'
-              = render 'layouts/info-body'
-              = yield
+          .design
+            .row
+              .span12
+                = render 'layouts/messages'
+                = render 'layouts/info-body'
+                = yield
         %footer
           = render 'layouts/info-footer'
           = yield

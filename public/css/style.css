@@ -19,6 +19,14 @@
     text-transform: capitalize;
 	width: 100%;
  }
+ .control-foot a{
+    text-decoration: none !important;
+    color:white !important;
+  }
+  .nav > li > a:hover, .nav > li > a:focus {
+    background-color: black !important;
+  }
+}
  .page-content{
     background: #467;
     border: 1px solid #4E4E4E;
@@ -300,7 +308,7 @@ footer {
   line-height: 30px;
 }
 .quick-links > li > a {
-  color: white;
+  color: black;
 }
 .social-icons-row {
   margin-top: 50px;
@@ -318,28 +326,12 @@ footer {
 .phone-number {
   margin-left: 25px;
 }
+.icon-inbox {
+  display:inline;
+}
+            
 .footer-divider {
   border-top: 0;  
   border-bottom: 1px solid #333;
 }
-/* End: Bootbusiness specific CSS */
 
-/* Start: Responsive CSS section */
-@media (max-width: 979px) {
-  .nav-collapse .dropdown-menu a {
-    color: white;
-  }
-  .nav-collapse .dropdown-menu a:hover {
-    background-color: #2E3436;
-  }
-  .nav-collapse .nav-header,
-  .nav-collapse .dropdown-submenu > a {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
-  body {
-    padding-top: 70px;
-  }
-}
-/* End : Responsive CSS section */
