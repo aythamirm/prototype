@@ -40,21 +40,38 @@ right: 700px;
 .state{
 
   
+  .handle {
+    padding-left: 10px !important;
+    background-repeat:no-repeat !important;
+  }
+  
   li div{
 
   &.active{
-    background:#678e8d !important;
+    background: url('state/active.png') !important;
+    background-repeat:no-repeat !important;
+    background-size: contain !important;
+    background-position:right top;
   }
   &.paused{
-    background:orange !important;
+    background: url('state/paused.png') !important;
+    background-repeat:no-repeat !important;
+    background-size: contain !important;
+    background-position:right top;
   }
 
   &.to_do {
-    background:gray !important;
+    background: url('state/to_do.png') !important;
+    background-repeat:no-repeat !important;
+    background-size: contain !important;
+    background-position:right top;
   }
 
   &.finished{
-   background:#468847!important;
+    background: url('state/finished.png') !important;
+    background-repeat:no-repeat !important;
+    background-size: contain !important;
+    background-position:right top;
   }
 
   &.interruption_control{
