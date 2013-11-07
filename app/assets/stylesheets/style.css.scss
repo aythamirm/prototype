@@ -52,12 +52,14 @@ right: 700px;
     background-repeat:no-repeat !important;
     background-size: contain !important;
     background-position:right top;
+    background-color: #E0E0E0  !important;
   }
   &.paused{
     background: url('state/paused.png') !important;
     background-repeat:no-repeat !important;
     background-size: contain !important;
     background-position:right top;
+    background-color: #E0E0E0  !important;
   }
 
   &.to_do {
@@ -65,6 +67,7 @@ right: 700px;
     background-repeat:no-repeat !important;
     background-size: contain !important;
     background-position:right top;
+    background-color: #E0E0E0 !important;
   }
 
   &.finished{
@@ -72,6 +75,7 @@ right: 700px;
     background-repeat:no-repeat !important;
     background-size: contain !important;
     background-position:right top;
+    background-color: #E0E0E0  !important;
   }
 
   &.interruption_control{
@@ -79,6 +83,7 @@ right: 700px;
   }
 }
 }
+
 #piechart{
   width:900px; 
   height: 500px
@@ -96,7 +101,7 @@ width: 60px !important;
  .sortable_tree .edit_project{
 position: absolute;
 top: 8px;
-right: 80px;
+right: 150px;
 width: 5px;
 }
 
