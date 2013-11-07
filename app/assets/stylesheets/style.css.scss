@@ -59,7 +59,7 @@ right: 700px;
     background-repeat:no-repeat !important;
     background-size: contain !important;
     background-position:right top;
-    background-color: #E0E0E0  !important;
+    background-color: #E8E8E8   !important;
   }
 
   &.to_do {
@@ -67,7 +67,7 @@ right: 700px;
     background-repeat:no-repeat !important;
     background-size: contain !important;
     background-position:right top;
-    background-color: #E0E0E0 !important;
+    background-color: #E8E8E8  !important;
   }
 
   &.finished{
@@ -75,7 +75,7 @@ right: 700px;
     background-repeat:no-repeat !important;
     background-size: contain !important;
     background-position:right top;
-    background-color: #E0E0E0  !important;
+    background-color: #E8E8E8  !important;
   }
 
   &.interruption_control{
@@ -83,7 +83,9 @@ right: 700px;
   }
 }
 }
-
+.sortable_tree a:hover {
+  background-color: #E8E8E8
+}
 #piechart{
   width:900px; 
   height: 500px
