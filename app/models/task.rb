@@ -1,6 +1,7 @@
 class Task < Node
   include ActiveModel::ForbiddenAttributesProtection
   has_many :interruptions
+  validates :task_name, :note, :action, presence: true
 
   state_machine :state, :initial => :to_do do
     
