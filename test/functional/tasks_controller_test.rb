@@ -1,47 +1,44 @@
 require 'test_helper'
+include Devise::TestHelpers
 
 class TasksControllerTest < ActionController::TestCase
   setup do
-    @task = tasks(:one)
+    @user = User.create(first_name: 'Jhon', last_name: 'wu', email: 'prueba@gmail.com', password: '12345', password_confirmation: '12345')
+    sign_in @user
+    debugger
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:tasks)
-  end
-
-  test "should get new" do
-    get :new
-    assert_response :success
   end
 
   test "should create task" do
     assert_difference('Task.count') do
-      post :create, task: { due_date: @task.due_date, note: @task.note, priority: @task.priority, task: @task.task }
+      post :create, task: { task_name: 'task1', note: 'task 1 is  the first task', action: 'Inbox' } 
     end
 
-    assert_redirected_to task_path(assigns(:task))
+    assert_redirected_to tasks_path
   end
 
   test "should show task" do
-    get :show, id: @task
+    get :show, id: task: { id: 9} 
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @task
+    get :edit, id: @task.id
     assert_response :success
   end
 
   test "should update task" do
-    put :update, id: @task, task: { due_date: @task.due_date, note: @task.note, priority: @task.priority, task: @task.task }
+    put :update, id: @task.id, task: { task_name: @task.task_name, note: @task.note, action: @task.action }
     assert_redirected_to task_path(assigns(:task))
   end
 
   test "should destroy task" do
     assert_difference('Task.count', -1) do
-      delete :destroy, id: @task
+      delete :destroy, id: @task.id
     end
 
     assert_redirected_to tasks_path
