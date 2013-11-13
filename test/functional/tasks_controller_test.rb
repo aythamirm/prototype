@@ -22,7 +22,7 @@ class TasksControllerTest < ActionController::TestCase
   end
 
   test "should show task" do
-    get :show, id: task: { id: 9} 
+    get :show, id: @task.id
     assert_response :success
   end
 
