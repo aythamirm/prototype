@@ -27,6 +27,10 @@ group :development do
   gem 'debugger'
 end
 
+group :test do
+  gem 'debugger'
+end
+
 gem 'awesome_nested_set', github:'xxswingxx/awesome_nested_set'
 gem 'activeadmin', github:'gregbell/active_admin'
 gem 'bootstrap-sass'

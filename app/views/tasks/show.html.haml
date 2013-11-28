@@ -25,7 +25,11 @@
       = suma
 
     %p
-      %b duration productive time:  
-      = current_user.total_time += (@task.finish_time - @task.start_time) 
+      %b duration productive time:
+      -if current_user.total_time != 0.0
+        = current_user.total_time += (@task.finish_time - @task.start_time)
+      -else
+        =current_user.total_time = 0.0
+
 = link_to 'Edit', edit_task_path(@task)  |
 = link_to 'Back', tasks_path 
